@@ -19,78 +19,59 @@
 3. **Systematic documentation of practical workflows**
 
 ## TODO_LIST
-- [ ] [ABS-GS](https://github.com/TY424/AbsGS)
-- [ ] [RAIN-GS](https://github.com/whuhxb/RAIN-GS)
-- [ ] [USDZ format](https://github.com/nv-tlabs/3dgrut) / [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started)
-- [ ] [SPZ format](https://github.com/nv-tlabs/3dgrut)
-- [ ] [ABS-GS](https://github.com/TY424/AbsGS)
-  - [x] Play [Minecraft](https://www.minecraft.net)
-  - [x] Play [Factorio](https://www.factorio.com) (WIP, but [PoC and demo available](https://github.com/moeru-ai/airi-factorio))
-  - [x] Chat in [Telegram](https://telegram.org)
-  - [x] Chat in [Discord](https://discord.com)
-  - [ ] Memory
-    - [x] Pure in-browser database support (DuckDB WASM | `pglite`)
-    - [ ] Memory Alaya (WIP)
-  - [ ] Pure in-browser local (WebGPU) inference
+- improvement
+  - [ ] [ABS-GS](https://github.com/TY424/AbsGS)
+  - [ ] [RAIN-GS](https://github.com/whuhxb/RAIN-GS)
+- format support
+  - [ ] [USDZ format](https://github.com/nv-tlabs/3dgrut) / [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started)
+  - [ ] [SPZ format](https://github.com/nianticlabs/spz)
+- doc support
+  - [ ] pipeline Instructions (WIP)
+  - [ ] [colmap](https://github.com/TY424/AbsGS)
+    - [ ] [USER GUID]
+  - [ ] [RealityCapture](https://github.com/TY424/AbsGS)
+  - [ ] [KIRI](https://github.com/TY424/AbsGS)
 
 
 # Improvement Item Description
 ## Improverment
-### [ABS-GS](https://github.com/TY424/AbsGS)
-<details>
-<summary><span style="font-weight: bold;">Abstract</span></summary>
-Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification.
-</details>
-
-### [RAIN-GS](https://github.com/whuhxb/RAIN-GS)
-<details>
-<summary><span style="font-weight: bold;">Abstract</span></summary>
-Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification.
-</details>
+ paper | Introduction | 
+ ---- | ---- 
+ [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
+ [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud.
 
 ## Format Support
-### [USDZ](https://github.com/nv-tlabs/3dgrut)
-<details>
-<summary><span style="font-weight: bold;">Abstract</span></summary>
-Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification.
-</details>
-
-
-### [SPZ]()
-<details>
-<summary><span style="font-weight: bold;">Abstract</span></summary>
-Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification.
-</details>
-
+ format | Introduction | 
+ ---- | ---- 
+ [USDZ](https://github.com/nv-tlabs/3dgrut) | Universal Scene Description (USD) is a framework for interchange of 3D computer graphics data. The framework focuses on collaboration, non-destructive editing, and enabling multiple views and opinions about graphics data.
+ [SPZ](https://github.com/nianticlabs/spz) | spz encoded splats are typically around 10x smaller than the corresponding .ply files, with minimal visual differences between the two. 
 
 # Gaussian-Splatting PIPELINE
-## Stage_1 : Accurate Camera Pose [Crucial]
+## Stage_1 : Accurate Camera Pose [*Crucial*]
 bad pose bad result
 
+Whether it's the 3DGS project or traditional photographic surveying such as SFM, MVS, etc., the preliminary work involves obtaining sufficiently accurate camera poses. This step is crucial, as any errors in this step will directly affect the subsequent reconstruction results.
 
-### [openMVG](https://github.com/openMVG/openMVG)
-<details>
-<summary><span style="font-weight: bold;">Abstract</span></summary>
-Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification.
-</details>
+The traditional camera pose acquisition methods include:
 
-### [COLMAP](https://github.com/colmap/colmap)
-<details>
-<summary><span style="font-weight: bold;">Abstract</span></summary>
+openSource | commercial(free) | commercial | mobile
+ ---- | ---- | ---- | ----
+ [COLMAP](https://github.com/colmap/colmap) (recommended) | [postshot](https://www.jawset.com/)(recommended)[User Guide](https://www.jawset.com/docs/d/Postshot+User+Guide)| [ContextCapture](https://www.contextcapture.com) | [KIRI](https://www.kiri.com)(recommended) 
+ [openMVG](https://github.com/openMVG/openMVG) | [Reality Capture](https://www.realitycapture.com) | [大疆智图](https://enterprise.dji.com/cn/dji-terra)|[Polyscam](https://www.polyscanner.com)
+ [OpenSfM](https://github.com/mapillary/OpenSfM) |  | |[matterport](https://www.matterport.com)
+ [MVS](https://github.com/colmap/colmap) |  | |
 
 
-### Image Pose
-### [openMVG](https://github.com/openMVG/openMVG)
-<details>
-<summary><span style="font-weight: bold;">Abstract</span></summary>
-Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification.
-</details>
+feed-forward：
+ paper | Introduction | 
+ ---- | ---- 
+ [VGGT](https://github.com/facebookresearch/vggt) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
+ [DUST3R](https://github.com/naver/dust3r) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point 
+ [MAST3R](https://github.com/naver/mast3r) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
+ [FAST3R](https://github.com/facebookresearch/fast3r) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud.
+ [......] |  ......
+  
 
-### [COLMAP](https://github.com/colmap/colmap)
-<details>
-<summary><span style="font-weight: bold;">Abstract</span></summary>
-We have limited resources for maintaining and updating the code. However, we have added a few new features since the original release that are inspired by some of the excellent work many other researchers have been doing on 3DGS. We will be adding other features within the ability of our resources.
-</details>
 
 ## Stage_2 : Gaussian Splatting Training
 
@@ -101,32 +82,6 @@ We have limited resources for maintaining and updating the code. However, we hav
 <details>
 <summary><span style="font-weight: bold;">Abstract</span></summary>
 </details>
-
-
-**Update of Spring 2024**:
-Orange Labs has kindly added [OpenXR support](#openxr-support) for VR viewing. 
-
-## Step-by-step Tutorial
-
-Jonathan Stephens made a fantastic step-by-step tutorial for setting up Gaussian Splatting on your machine, along with instructions for creating usable datasets from videos. If the instructions below are too dry for you, go ahead and check it out [here](https://www.youtube.com/watch?v=UXtuigy_wYc).
-
-## Colab
-
-User [camenduru](https://github.com/camenduru) was kind enough to provide a Colab template that uses this repo's source (status: August 2023!) for quick and easy access to the method. Please check it out [here](https://github.com/camenduru/gaussian-splatting-colab).
-
-## Cloning the Repository
-
-The repository contains submodules, thus please check it out with 
-```shell
-# SSH
-git clone git@github.com:graphdeco-inria/gaussian-splatting.git --recursive
-```
-or
-```shell
-# HTTPS
-git clone https://github.com/graphdeco-inria/gaussian-splatting --recursive
-```
-
 ## Overview
 
 The codebase has 4 main components:
