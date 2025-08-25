@@ -44,6 +44,14 @@
 
 # Improvement Item Description
 ## Improverment
+ paper | Introduction | 
+ ---- | ---- 
+ [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
+ [RAIN-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification.  
+
+
+ 
+ 
 ### [ABS-GS](https://github.com/TY424/AbsGS)
 <details>
 <summary><span style="font-weight: bold;">Abstract</span></summary>
@@ -57,6 +65,11 @@ Reveal that the original adaptive density control strategy in 3D Gaussian Splatt
 </details>
 
 ## Format Support
+ format | Introduction | 
+ ---- | ---- 
+ [USDZ](https://github.com/nv-tlabs/3dgrut) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
+ [SPZ](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification.  
+
 ### [USDZ](https://github.com/nv-tlabs/3dgrut)
 <details>
 <summary><span style="font-weight: bold;">Abstract</span></summary>
