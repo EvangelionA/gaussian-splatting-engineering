@@ -122,7 +122,7 @@ pip install diff-gaussian-spaltting
  ---- | ---- | ----
  [SIBR](https://sibr.gitlabpages.inria.fr/) | Official 3DGS Viewer | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
  [SuperSplat](https://github.com/playcanvas/supersplat) <br> (**recommended**)| SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
- [LCC Viewer](https://xgrids.cn/support/download?page=LCCViewer) | Lightweight viewer for LCC models with measurement tools and annotation capabilities, optimized for project review and collaboration. | [live version](https://superspl.at/editor)
+ [LCC Viewer](https://xgrids.cn/support/download?page=LCCViewer) | Lightweight viewer for LCC models with measurement tools and annotation capabilities, optimized for project review and collaboration. | [website](https://xgrids.com/support/download?page=LCCViewer)
  
 ### **Creativefield**
  SoftWare | Object | UserGuide |
