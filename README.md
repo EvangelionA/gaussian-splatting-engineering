@@ -76,7 +76,7 @@ Whether it's the 3DGS project or traditional photographic surveying such as SFM,
 
 openSource | commercial(free) | commercial | mobile
  ---- | ---- | ---- | ----
- [COLMAP](https://github.com/colmap/colmap) (recommended) | [postshot](https://www.jawset.com/)(recommended)| [ContextCapture](https://www.contextcapture.com) | [KIRI](https://www.kiri.com)
+ [COLMAP](https://github.com/colmap/colmap) <br> (recommended) | [postshot](https://www.jawset.com/) <br> (recommended)| [ContextCapture](https://www.contextcapture.com) | [KIRI](https://www.kiri.com)
  [openMVG](https://github.com/openMVG/openMVG) | [Reality Capture](https://www.realitycapture.com) | [大疆智图](https://enterprise.dji.com/cn/dji-terra)|[Polyscam](https://www.polyscanner.com)
  [OpenSfM](https://github.com/mapillary/OpenSfM) |  | |[matterport](https://www.matterport.com)
  [MVS](https://github.com/colmap/colmap) |  | |
@@ -89,7 +89,7 @@ openSource | commercial(free) | commercial | mobile
  [DUST3R](https://github.com/naver/dust3r) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point 
  [MAST3R](https://github.com/naver/mast3r) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
  [FAST3R](https://github.com/facebookresearch/fast3r) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud.
- [etc.] |  ......
+ [etc.] |  ..
   
 
 
@@ -99,7 +99,7 @@ openSource | commercial(free) | commercial | mobile
 
 openSource | commercial(free) | commercial | mobile
  ---- | ---- | ---- | ----
- [COLMAP](https://github.com/colmap/colmap) (recommended) | [postshot](https://www.jawset.com/)(recommended)| [ContextCapture](https://www.contextcapture.com) | [KIRI](https://www.kiri.com)
+ [COLMAP](https://github.com/colmap/colmap) <br> (recommended) | [postshot](https://www.jawset.com/) <br> (recommended)| [ContextCapture](https://www.contextcapture.com) | [KIRI](https://www.kiri.com)
  [openMVG](https://github.com/openMVG/openMVG) | [Reality Capture](https://www.realitycapture.com) | [大疆智图](https://enterprise.dji.com/cn/dji-terra)|[Polyscam](https://www.polyscanner.com)
  [OpenSfM](https://github.com/mapillary/OpenSfM) |  | |[matterport](https://www.matterport.com)
  [MVS](https://github.com/colmap/colmap) |  | |
@@ -121,13 +121,13 @@ pip install diff-gaussian-spaltting
  Object | Introduction | UserGuide |
  ---- | ---- | ----
  [SIBR](https://sibr.gitlabpages.inria.fr/) | Official 3DGS Viewer | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
- [SuperSplat](https://github.com/playcanvas/supersplat) (**recommended**)| SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
+ [SuperSplat](https://github.com/playcanvas/supersplat) <br> (**recommended**)| SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
  
 ### **Creativefield**
  SoftWare | Object | UserGuide |
  ---- | ---- | ----
  [UE](https://sibr.gitlabpages.inria.fr/) + 3DGS | [XScene-UEPlugin](https://github.com/xverse-engine/XScene-UEPlugin/tree/main) | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
- [Blender](https://github.com/playcanvas/supersplat) + 3DGS | SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
+ [Blender](https://github.com/playcanvas/supersplat) + 3DGS | [KIRI_BlenderPlugin](https://github.com/Kiri-Innovation/3dgs-render-blender-addon) <br> [mediastormDev-BlenderNode](https://github.com/mediastormDev/Blender-3DGS-4DGS-Viewer-Node)| 
 
 
 
