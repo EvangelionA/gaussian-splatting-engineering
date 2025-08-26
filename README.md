@@ -6,6 +6,8 @@
 </p>
 <hr>
 
+English | [中文](docs/README_ZH.md)
+
 # Introduction
   This repository aims to bridge the gap between academic research and industrial deployment of 3D Gaussian Splatting (3DGS) technology. While most existing papers focus on theoretical innovations, this project emphasizes:
 1. **Engineering-oriented implementation**
@@ -44,6 +46,25 @@
  ---- | ---- 
  [USDZ](https://github.com/nv-tlabs/3dgrut) | Universal Scene Description (USD) is a framework for interchange of 3D computer graphics data. The framework focuses on collaboration, non-destructive editing, and enabling multiple views and opinions about graphics data.
  [SPZ](https://github.com/nianticlabs/spz) | spz encoded splats are typically around 10x smaller than the corresponding .ply files, with minimal visual differences between the two. 
+
+## Project Structure
+```text
+📦 gaussian-splatting-engineering
+├─ 📁 docs
+│  └─ README_CN.md              # 中文指南
+├─ 📁 gaussian-splatting-main
+│  ├─ arguments/                    
+│  ├─ assets/                   
+│  ├─ gaussian_renderer/                     
+│  ├─ IpipsPyTorch/                    
+│  ├─ scene/
+│  ├─ utils/
+│  ├─ .gitignore       
+│  └─ README_CN.md              
+├─ LICENSE
+└─ README.md                    # Main overview file
+```
+
 
 # Gaussian-Splatting PIPELINE
 ## Stage_1 : Accurate Camera Pose [*Crucial*]
@@ -103,10 +124,12 @@ pip install diff-gaussian-spaltting
  [SuperSplat](https://github.com/playcanvas/supersplat) (**recommended**)| SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
  
 ### **Creativefield**
- Object | Introduction | UserGuide |
+ SoftWare | Object | UserGuide |
  ---- | ---- | ----
- [UE](https://sibr.gitlabpages.inria.fr/) | Official 3DGS Viewer | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
- [Blender](https://github.com/playcanvas/supersplat) (**recommended**)| SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
+ [UE](https://sibr.gitlabpages.inria.fr/) + 3DGS | [XScene-UEPlugin](https://github.com/xverse-engine/XScene-UEPlugin/tree/main) | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
+ [Blender](https://github.com/playcanvas/supersplat) + 3DGS | SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
+
+
 
 ### **Production**
  Object | Introduction | UserGuide |
