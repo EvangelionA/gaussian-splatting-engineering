@@ -1,7 +1,8 @@
 <h1 align="center">gaussian-splatting-engineering</h1>
 <p align="center">
   <img src="https://img.shields.io/badge/Author-EvangelionA-orange" alt="Author" />
-  <a href="docs/README_ZH.md"><img src="https://img.shields.io/badge/Doc-中文版-blue.svg" alt="ZH doc"/></a>
+  <a href="./README.md"><img src="https://img.shields.io/badge/Doc-English-blue.svg" alt="ZH doc"/></a>
+  <a href="docs/README_ZH.md"><img src="https://img.shields.io/badge/Doc-中文-blue.svg" alt="ZH doc"/></a>
 </p>
 <hr>
 
@@ -33,10 +34,10 @@
 
 # Improvement Item Description
 ## Improverment
- paper | Introduction | 
- ---- | ---- 
- [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
- [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud.
+ Paper | Introduction | TestResults |
+ ---- | ---- | ----
+ [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. | [result](datatest/abs-gs/)
+ [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud. | [result](datatest/rain-gs/)
 
 ## Format Support
  format | Introduction | 
@@ -67,7 +68,7 @@ openSource | commercial(free) | commercial | mobile
  [DUST3R](https://github.com/naver/dust3r) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point 
  [MAST3R](https://github.com/naver/mast3r) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
  [FAST3R](https://github.com/facebookresearch/fast3r) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud.
- [......] |  ......
+ [etc.] |  ......
   
 
 
@@ -87,28 +88,31 @@ openSource | commercial(free) | commercial | mobile
 
 ### Installing
 ```
-Give examples
+pip install diff-gaussian-spaltting
 ```
 
 
 
-
-
 ## Stage_3 : Gaussian Splatting Application
-### [SIBR](https://github.com/graphdeco-inria/sibr)
-<details>
-<summary><span style="font-weight: bold;">Abstract</span></summary>
 
-</details>
+### **VIEWER**
 
-### Navigation in SIBR Viewers
-The SIBR interface provides several methods of navigating the scene. By default, you will be started with an FPS navigator, which you can control with ```W, A, S, D, Q, E``` for camera translation and ```I, K, J, L, U, O``` for rotation. Alternatively, you may want to use a Trackball-style navigator (select from the floating menu). You can also snap to a camera from the data set with the ```Snap to``` button or find the closest camera with ```Snap to closest```. The floating menues also allow you to change the navigation speed. You can use the ```Scaling Modifier``` to control the size of the displayed Gaussians, or show the initial point cloud.
+ Object | Introduction | UserGuide |
+ ---- | ---- | ----
+ [SIBR](https://sibr.gitlabpages.inria.fr/) | Official 3DGS Viewer | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
+ [SuperSplat](https://github.com/playcanvas/supersplat) (**recommended**)| SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
+ 
+### **Creativefield**
+ Object | Introduction | UserGuide |
+ ---- | ---- | ----
+ [UE](https://sibr.gitlabpages.inria.fr/) | Official 3DGS Viewer | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
+ [Blender](https://github.com/playcanvas/supersplat) (**recommended**)| SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
 
+### **Production**
+ [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started) | Official 3DGS Viewer | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
+ [Blender](https://www.blender.org/) | SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
 
 ## FAQ
-
-
-
 
 ### Prerequisites
 
