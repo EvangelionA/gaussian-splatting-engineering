@@ -109,6 +109,8 @@ pip install diff-gaussian-spaltting
  [Blender](https://github.com/playcanvas/supersplat) (**recommended**)| SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
 
 ### **Production**
+ Object | Introduction | UserGuide |
+ ---- | ---- | ----
  [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started) | Official 3DGS Viewer | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
  [Blender](https://www.blender.org/) | SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
 
