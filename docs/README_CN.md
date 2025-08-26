@@ -6,26 +6,27 @@
 </p>
 <hr>
 
-English | [中文](docs/README_CN.md)
+[English](../README.md) | 中文
 
 # Introduction
-  This repository aims to bridge the gap between academic research and industrial deployment of 3D Gaussian Splatting (3DGS) technology. While most existing papers focus on theoretical innovations, this project emphasizes:
-1. **Engineering-oriented implementation**
-   
-2. **Steady performance optimization**
-   
-3. **Systematic documentation of practical workflows**
+  这个项目的目的是为了解决当前3DGS在学术探索与工程化部署的差距。当前大部分的论文都侧重于理论创新，而本项目则侧重于：
 
-**This project is built upon [3DGS](https://github.com/graphdeco-inria/gaussian-splatting).**
+1. **工程化实现**
+   
+2. **稳定性能与效果优化**
+   
+3. **系统性的工作流程文档梳理**    
+
+**该项目构建基于 [3DGS](https://github.com/graphdeco-inria/gaussian-splatting).**
 
 ## TODO_LIST
-- **improvement**
+- improvement (改进项)
   - [ ] [ABS-GS](https://github.com/TY424/AbsGS)
   - [ ] [RAIN-GS](https://github.com/whuhxb/RAIN-GS)
-- **format support**
+- format support （格式支持）
   - [ ] [USDZ format](https://github.com/nv-tlabs/3dgrut) / [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started)
   - [ ] [SPZ format](https://github.com/nianticlabs/spz)
-- **doc support**
+- doc support （文档支持）
   - [ ] pipeline Instructions (WIP)
   - [ ] [colmap](https://github.com/TY424/AbsGS)
     - [ ] [USER GUID]
