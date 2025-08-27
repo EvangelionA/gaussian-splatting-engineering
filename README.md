@@ -22,6 +22,7 @@ English | [中文-WIP](docs/README_CN.md)
 - **improvement**
   - [ ] [ABS-GS](https://github.com/TY424/AbsGS)
   - [ ] [RAIN-GS](https://github.com/whuhxb/RAIN-GS)
+  - [ ] **......**
 - **format support**
   - [ ] [USDZ format](https://github.com/nv-tlabs/3dgrut) / [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started)
   - [ ] [SPZ format](https://github.com/nianticlabs/spz)
@@ -32,6 +33,7 @@ English | [中文-WIP](docs/README_CN.md)
   - [ ] [RealityCapture](https://github.com/TY424/AbsGS)
     - [ ] [USER GUID]
   - [ ] [KIRI](https://github.com/TY424/AbsGS)
+  - [ ] **......**
 - **release package**
   - [x] v0.0.0 (3DGS-baseline)
   - [x] Google Drive
@@ -44,6 +46,7 @@ English | [中文-WIP](docs/README_CN.md)
  ---- | ---- | ----
  [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. | [result-WIP](dataTestResult/abs-gs/)
  [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud. | [result-WIP](dataTestResult/rain-gs/)
+ etc. | **......**
 
 ## Format Support
  format | Introduction | 
@@ -84,11 +87,11 @@ English | [中文-WIP](docs/README_CN.md)
 
 # Gaussian-Splatting PIPELINE
 ## Stage_1 : Accurate Camera Pose [*Crucial*]
-**bad pose bad result**
+**!!! bad pose bad result**
 
 Whether it's the 3DGS project or traditional photographic surveying such as SFM, MVS, etc., the preliminary work involves obtaining sufficiently accurate camera poses. This step is crucial, as any errors in this step will directly affect the subsequent reconstruction results.
 
-**The traditional camera pose acquisition methods include**:
+**The traditional camera pose acquisition methods and 3D Reconstruction APP include**:
 
 openSource | commercial(free) | commercial | mobile
  ---- | ---- | ---- | ----
@@ -98,35 +101,33 @@ openSource | commercial(free) | commercial | mobile
  [openMVG](https://github.com/openMVG/openMVG) |  | |[matterport](https://matterport.com/?srsltid=AfmBOor0O6mOJot6qlPXNSAimFjW-oLNI4x7l3ePkJ2vtatHGmB9vhJ6)
 
 
-**feed-forward**：
+**FEED-FORWARD**：
  paper | Introduction | 
  ---- | ---- 
- [VGGT](https://github.com/facebookresearch/vggt) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
- [DUST3R](https://github.com/naver/dust3r) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point 
- [MAST3R](https://github.com/naver/mast3r) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
- [FAST3R](https://github.com/facebookresearch/fast3r) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud.
- [etc.] |  ..
+ [VGGT](https://github.com/facebookresearch/vggt) | Visual Geometry Grounded Transformer (VGGT, CVPR 2025) is a feed-forward neural network that directly infers all key 3D attributes of a scene, including extrinsic and intrinsic camera parameters, point maps, depth maps, and 3D point tracks, from one, a few, or hundreds of its views, within seconds.
+ [DUST3R](https://github.com/naver/dust3r) | This paper introduces DUSt3R, a novel approach for dense 3D reconstruction from arbitrary image collections without requiring prior camera calibration or pose information. It formulates pairwise reconstruction as a regression of pointmaps, unifying monocular and binocular cases. For multi-image inputs, a global alignment strategy aligns pairwise pointmaps into a common frame. Built on Transformer encoders/decoders, DUSt3R directly produces 3D models and depth maps while enabling recovery of pixel matches and camera parameters. Experiments demonstrate state-of-the-art performance across monocular/multi-view depth estimation and relative pose estimation tasks.
+ [MAST3R](https://github.com/naver/mast3r) | MASt3R(1) brings a new level of precision and detail to 3D reconstruction and localization tasks by providing pixel correspondences for even very large image collections. The remarkable results of MASt3R are achieved by adding an extra head to the DUSt3R framework(2) and a matching algorithm so that it efficiently outputs a 3D reconstruction that is metric along with dense local feature maps, providing accurate depth perception and spatial understanding.
+ [FAST3R](https://github.com/facebookresearch/fast3r) | In this work, propose Fast 3D Reconstruction (Fast3R), a novel multi-view generalization to DUSt3R that achieves efficient and scalable 3D reconstruction by processing many views in parallel. Fast3R's Transformer-based architecture forwards N images in a single forward pass, bypassing the need for iterative alignment. 
+ etc. |  **......**
   
 
 
-## Stage_2 : Gaussian Splatting Training
+## Stage_2 : Gaussian Splatting Training(WIP)
 
-**software**
+**software(incomplete)**
+ commercial(free) | mobile | 
+ ---- | ---- 
+[postshot](https://www.jawset.com/) <br> (recommended) | [KIRI Engine](https://www.kiriengine.app/)
+[DJI TERRA](https://enterprise.dji.com/cn/dji-terra) | [Polycam](https://poly.cam/)
 
-openSource | commercial(free) | commercial | mobile
- ---- | ---- | ---- | ----
- [COLMAP](https://github.com/colmap/colmap) <br> (recommended) | [postshot](https://www.jawset.com/) <br> (recommended)| [ContextCapture](https://www.contextcapture.com) | [KIRI](https://www.kiri.com)
- [openMVG](https://github.com/openMVG/openMVG) | [Reality Capture](https://www.realitycapture.com) | [大疆智图](https://enterprise.dji.com/cn/dji-terra)|[Polyscam](https://www.polyscanner.com)
- [OpenSfM](https://github.com/mapillary/OpenSfM) |  | |[matterport](https://www.matterport.com)
- [MVS](https://github.com/colmap/colmap) |  | |
+
 
 
 ### Getting Started
 
 ### Installing
-```
-pip install diff-gaussian-spaltting
-```
+
+reference [gaussian-splatting](https://github.com/graphdeco-inria/gaussian-splatting#setup)
 
 
 
@@ -141,95 +142,48 @@ pip install diff-gaussian-spaltting
  [LCC Viewer](https://xgrids.cn/support/download?page=LCCViewer) | Lightweight viewer for LCC models with measurement tools and annotation capabilities, optimized for project review and collaboration. | [website](https://xgrids.com/support/download?page=LCCViewer)
  
 ### **Creativefield**
- SoftWare | Object | UserGuide |
+ SoftWare | Object | Introduction |
  ---- | ---- | ----
- [UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [XScene-UEPlugin](https://github.com/xverse-engine/XScene-UEPlugin/tree/main) | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
- [Blender](https://github.com/playcanvas/supersplat) + 3DGSPlugin | [KIRI_BlenderPlugin](https://github.com/Kiri-Innovation/3dgs-render-blender-addon) <br> [mediastormDev-BlenderNode](https://github.com/mediastormDev/Blender-3DGS-4DGS-Viewer-Node)| 
+ [UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [XScene-UEPlugin](https://github.com/xverse-engine/XScene-UEPlugin/tree/main) | It provides real-time visualization, management, editing, and scalable hybrid rendering of Gaussian Splatting models—a novel technique for reconstructing 3D scenes from multi-view photos. 
+ [Blender](https://github.com/playcanvas/supersplat) + 3DGSPlugin | [KIRI_BlenderPlugin](https://github.com/Kiri-Innovation/3dgs-render-blender-addon) <br> | 1.Work with 3DGS content in a familiar environment.<br>2.Edit and optimize point clouds before 3DGS conversion.<br> 3.Create animations and motion graphics.<br>4.Objects react to lighting and cast shadows|
+ [Blender](https://github.com/playcanvas/supersplat) + 3DGS +4DG ViewerNode |[mediastormDev-BlenderNode](https://github.com/mediastormDev/Blender-3DGS-4DGS-Viewer-Node) | A custom Blender node developed by Mediastorm during the ASUS 4DGS Yungang Grottoes project. Supports loading and previewing of 3DGS and 4DGS datasets, with basic rendering styles for quick inspection.
+ etc. |  **......**
+ 
 
 
 
 ### **Production**
  Object | Introduction | UserGuide |
  ---- | ---- | ----
- [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started) | Official 3DGS Viewer | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
- [Blender](https://www.blender.org/) | SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
-
-## FAQ
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+ [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started) | NVIDIA Omniverse is a platform of APIs, Services, and Software Development Kits (SDKs) that enable developers to build generative AI-enabled﻿ tools, applications, and services for industrial digitalization. | [SDK](https://docs.nvidia.com/omniverse/index.html#get-started)
+ [NVIDIA Isaac](https://developer.nvidia.com/isaac) | Ready to jump start your AI robot development? The NVIDIA Isaac™ platform delivers the NVIDIA® CUDA®-accelerated libraries, application frameworks, and AI models you need to create autonomous mobile robots (AMRs), arms and manipulators, humanoids, and more. | [github](https://github.com/nvidia-isaac) |
+ [OpenUSD](https://developer.nvidia.com/usd?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.usd_resources%3Adesc%2Ctitle%3Aasc&hitsPerPage=6) | Developed by Pixar Animation Studios, OpenUSD is an open-source framework for creating, simulating, and collaborating in 3D worlds. OpenUSD is foundational to NVIDIA Omniverse™, the platform for developing 3D applications for industrial digitalization and generative physical AI. | [DOC](https://developer.nvidia.com/usd?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.usd_resources%3Adesc%2Ctitle%3Aasc&hitsPerPage=6#section-getting-started)
+  etc. |  **......**
 
 ## Acknowledgments
 
 This project is built upon [3DGS](https://github.com/graphdeco-inria/gaussian-splatting).  We thank all the authors for their great repos.
+
+## Contributing
+
+Thank you very much for the contribution of the 3DGS project to the open source community!
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h3 class="title">BibTeX</h3>
+    <pre><code>@Article{kerbl3Dgaussians,
+      author       = {Kerbl, Bernhard and Kopanas, Georgios and Leimk{\"u}hler, Thomas and Drettakis, George},
+      title        = {3D Gaussian Splatting for Real-Time Radiance Field Rendering},
+      journal      = {ACM Transactions on Graphics},
+      number       = {4},
+      volume       = {42},
+      month        = {July},
+      year         = {2023},
+      url          = {https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/}
+}</code></pre>
+  </div>
+</section>
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
