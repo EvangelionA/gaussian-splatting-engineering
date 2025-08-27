@@ -2,11 +2,11 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Author-EvangelionA-orange" alt="Author" />
   <a href="./README.md"><img src="https://img.shields.io/badge/Doc-English-blue.svg" alt="ZH doc"/></a>
-  <a href="docs/README_CN.md"><img src="https://img.shields.io/badge/Doc-中文-blue.svg" alt="ZH doc"/></a>
+  <a href="docs/README_CN.md"><img src="https://img.shields.io/badge/Doc-中文WIP-blue.svg" alt="ZH doc"/></a>
 </p>
 <hr>
 
-English | [中文](docs/README_CN.md)
+English | [中文-WIP](docs/README_CN.md)
 
 # Introduction
   This repository aims to bridge the gap between academic research and industrial deployment of 3D Gaussian Splatting (3DGS) technology. While most existing papers focus on theoretical innovations, this project emphasizes:
@@ -32,14 +32,18 @@ English | [中文](docs/README_CN.md)
   - [ ] [RealityCapture](https://github.com/TY424/AbsGS)
     - [ ] [USER GUID]
   - [ ] [KIRI](https://github.com/TY424/AbsGS)
+- **release package**
+  - [x] v0.0.0 (3DGS-baseline)
+  - [x] Google Drive
+  - [x] Baidu Disk
 
 
 # Improvement Item Description
 ## Improverment
  Paper | Introduction | TestResults |
  ---- | ---- | ----
- [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. | [result](datatest/abs-gs/)
- [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud. | [result](datatest/rain-gs/)
+ [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. | [result-WIP](dataTestResult/abs-gs/)
+ [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud. | [result-WIP](dataTestResult/rain-gs/)
 
 ## Format Support
  format | Introduction | 
@@ -50,6 +54,7 @@ English | [中文](docs/README_CN.md)
 ## Project Structure
 ```text
 📦 gaussian-splatting-engineering
+├─ 📁 dataTestResult
 ├─ 📁 docs
 │  └─ README_CN.md              
 ├─ 📁 gaussian-splatting-main
@@ -87,10 +92,10 @@ Whether it's the 3DGS project or traditional photographic surveying such as SFM,
 
 openSource | commercial(free) | commercial | mobile
  ---- | ---- | ---- | ----
- [COLMAP](https://github.com/colmap/colmap) <br> (recommended) | [postshot](https://www.jawset.com/) <br> (recommended)| [ContextCapture](https://www.contextcapture.com) | [KIRI](https://www.kiri.com)
- [openMVG](https://github.com/openMVG/openMVG) | [Reality Capture](https://www.realitycapture.com) | [大疆智图](https://enterprise.dji.com/cn/dji-terra)|[Polyscam](https://www.polyscanner.com)
- [OpenSfM](https://github.com/mapillary/OpenSfM) |  | |[matterport](https://www.matterport.com)
- [MVS](https://github.com/colmap/colmap) |  | |
+ [COLMAP](https://github.com/colmap/colmap) <br> (recommended) | [postshot](https://www.jawset.com/) <br> (recommended)| [ContextCapture](https://www.bentley.cn/software/reality-and-spatial-modeling/) | [KIRI Engine](https://www.kiriengine.app/)
+ [OpenSFM](https://github.com/mapillary/OpenSfM) | [RealityScan / RealityCapture](https://www.realityscan.com/en-US) | [DJI TERRA](https://enterprise.dji.com/cn/dji-terra) | [Polycam](https://poly.cam/)
+ [openMVS](https://github.com/cdcseacave/openMVS) |  | [matterport](https://matterport.com/?srsltid=AfmBOor0O6mOJot6qlPXNSAimFjW-oLNI4x7l3ePkJ2vtatHGmB9vhJ6)|[RealityScan](https://www.realityscan.com/en-US)
+ [openMVG](https://github.com/openMVG/openMVG) |  | |[matterport](https://matterport.com/?srsltid=AfmBOor0O6mOJot6qlPXNSAimFjW-oLNI4x7l3ePkJ2vtatHGmB9vhJ6)
 
 
 **feed-forward**：
