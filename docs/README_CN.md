@@ -19,21 +19,27 @@
 
 **该项目构建基于 [3DGS](https://github.com/graphdeco-inria/gaussian-splatting).**
 
+
 ## 待办事项
-- 优化项
+- **优化项**
   - [ ] [ABS-GS](https://github.com/TY424/AbsGS)
   - [ ] [RAIN-GS](https://github.com/whuhxb/RAIN-GS)
-- 格式支持
+  - [ ] **......**
+- **格式支持**
   - [ ] [USDZ format](https://github.com/nv-tlabs/3dgrut) / [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started)
   - [ ] [SPZ format](https://github.com/nianticlabs/spz)
-- 文档支持
+- **文档支持**
   - [ ] pipeline Instructions (WIP)
   - [ ] [colmap](https://github.com/TY424/AbsGS)
     - [ ] [USER GUID]
   - [ ] [RealityCapture](https://github.com/TY424/AbsGS)
     - [ ] [USER GUID]
   - [ ] [KIRI](https://github.com/TY424/AbsGS)
-
+  - [ ] **......**
+- **发布**
+  - [x] v0.0.0 (3DGS-baseline)
+  - [x] Google Drive
+  - [x] Baidu Disk
 
 # 优化项说明
 ## 优化项
