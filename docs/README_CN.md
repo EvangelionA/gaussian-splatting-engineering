@@ -39,14 +39,14 @@
 ## Improverment
  Paper | Introduction | TestResults |
  ---- | ---- | ----
- [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. | [result](datatest/abs-gs/)
- [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud. | [result](datatest/rain-gs/)
+ [ABS-GS](https://github.com/TY424/AbsGS) | 揭示3DGS中原有的自适应密度控制策略存在梯度冲突问题，该缺陷会导致性能下降，并提出以同向梯度作为致密化的指导。| [result](datatest/abs-gs/)
+ [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | 使用简单有效的策略包括稀疏大方差（SLV）随机初始化、渐进式高斯低通滤波器控制以及自适应边界扩展分割（ABE-Split）算法，即使从随机点云开始，也能稳健地引导3D高斯模型对场景进行建模。 | [result](datatest/rain-gs/)
 
 ## Format Support
  format | Introduction | 
  ---- | ---- 
- [USDZ](https://github.com/nv-tlabs/3dgrut) | Universal Scene Description (USD) is a framework for interchange of 3D computer graphics data. The framework focuses on collaboration, non-destructive editing, and enabling multiple views and opinions about graphics data.
- [SPZ](https://github.com/nianticlabs/spz) | spz encoded splats are typically around 10x smaller than the corresponding .ply files, with minimal visual differences between the two. 
+ [USDZ](https://github.com/nv-tlabs/3dgrut) | 通用场景描述（USD）是一个用于交换3D计算机图形数据的框架。该框架侧重于协作、无损编辑，以及支持对图形数据的多种视角。
+ [SPZ](https://github.com/nianticlabs/spz) | SPZ编码的splats文件通常比相应的.ply文件小约10倍，两者之间的视觉差异极小。
 
 ## Project Structure
 ```text
@@ -80,13 +80,13 @@
 
 # Gaussian-Splatting PIPELINE
 ## Stage_1 : Accurate Camera Pose [*Crucial*]
-**bad pose bad result**
+**没有精准的位姿就没有好的结果**
 
-Whether it's the 3DGS project or traditional photographic surveying such as SFM, MVS, etc., the preliminary work involves obtaining sufficiently accurate camera poses. This step is crucial, as any errors in this step will directly affect the subsequent reconstruction results.
+无论是3DGS项目还是传统的摄影测量技术，如SFM、MVS等，前期工作都涉及获取足够精确的相机位姿。这一步至关重要，因为这一步中的任何误差都会直接影响后续的重建结果。
 
-**The traditional camera pose acquisition methods include**:
+**传统的相机位姿获取方法包括**:
 
-openSource | commercial(free) | commercial | mobile
+开源 | 商业(免费) | 商业 | 移动端
  ---- | ---- | ---- | ----
  [COLMAP](https://github.com/colmap/colmap) <br> (recommended) | [postshot](https://www.jawset.com/) <br> (recommended)| [ContextCapture](https://www.contextcapture.com) | [KIRI](https://www.kiri.com)
  [openMVG](https://github.com/openMVG/openMVG) | [Reality Capture](https://www.realitycapture.com) | [大疆智图](https://enterprise.dji.com/cn/dji-terra)|[Polyscam](https://www.polyscanner.com)
@@ -94,138 +94,85 @@ openSource | commercial(free) | commercial | mobile
  [MVS](https://github.com/colmap/colmap) |  | |
 
 
-**feed-forward**：
+**前馈网络**：
  paper | Introduction | 
  ---- | ---- 
- [VGGT](https://github.com/facebookresearch/vggt) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
- [DUST3R](https://github.com/naver/dust3r) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point 
- [MAST3R](https://github.com/naver/mast3r) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. 
- [FAST3R](https://github.com/facebookresearch/fast3r) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud.
- [etc.] |  ..
+ [VGGT](https://github.com/facebookresearch/vggt) | 视觉几何接地变换器（VGGT，CVPR 2025）是一种前馈神经网络，能在几秒钟内直接从场景的一个、几个或数百个视角推断出场景的所有关键3D属性，包括外部和内部相机参数、点图、深度图和3D点轨迹。
+ [DUST3R](https://github.com/naver/dust3r) | 用于从任意图像集合中进行密集3D重建，无需事先进行相机校准或获取姿态信息。该方法将成对重建表述为点云的回归问题，从而统一了单目和双目情况。对于多图像输入，采用全局对齐策略将成对的点云对齐到一个共同的框架中。DUSt3R基于Transformer编码器/解码器构建，能够直接生成3D模型和深度图，同时恢复像素匹配和相机参数。实验表明，在单目/多视图深度估计和相对姿态估计任务中，DUSt3R均展现了最先进的性能。
+ [MAST3R](https://github.com/naver/mast3r) | MASt3R(1)通过为甚至非常大的图像集合提供像素对应关系，将3D重建和定位任务的精度和细节提升到了一个新的水平。MASt3R的显著成果是通过在DUSt3R框架(2)的基础上增加一个额外的头部和一个匹配算法来实现的，这样它就能高效地输出一个具有度量尺度的3D重建结果，同时输出密集的局部特征图，从而提供准确的深度感知和空间理解。
+ [FAST3R](https://github.com/facebookresearch/fast3r) | 在本研究中，我们提出了Fast 3D Reconstruction（Fast3R），这是对DUSt3R的一种新颖的多视图泛化方法，通过并行处理多个视图来实现高效且可扩展的3D重建。Fast3R基于Transformer的架构在单次前向传递中转发N张图像，无需进行迭代对齐。
+ etc. |  **......**
   
 
 
-## Stage_2 : Gaussian Splatting Training
+## Stage_2 : Gaussian Splatting Training(WIP)
 
-**software**
-
-openSource | commercial(free) | commercial | mobile
- ---- | ---- | ---- | ----
- [COLMAP](https://github.com/colmap/colmap) <br> (recommended) | [postshot](https://www.jawset.com/) <br> (recommended)| [ContextCapture](https://www.contextcapture.com) | [KIRI](https://www.kiri.com)
- [openMVG](https://github.com/openMVG/openMVG) | [Reality Capture](https://www.realitycapture.com) | [大疆智图](https://enterprise.dji.com/cn/dji-terra)|[Polyscam](https://www.polyscanner.com)
- [OpenSfM](https://github.com/mapillary/OpenSfM) |  | |[matterport](https://www.matterport.com)
- [MVS](https://github.com/colmap/colmap) |  | |
+**software(incomplete)**
+ 商业免费 | 移动端 | 
+ ---- | ---- 
+[postshot](https://www.jawset.com/) <br> (recommended) | [KIRI Engine](https://www.kiriengine.app/)
+[DJI TERRA](https://enterprise.dji.com/cn/dji-terra) | [Polycam](https://poly.cam/)
 
 
 ### Getting Started
 
 ### Installing
-```
-pip install diff-gaussian-spaltting
-```
 
+参考 [gaussian-splatting](https://github.com/graphdeco-inria/gaussian-splatting#setup)
 
+## Stage_3 : 3DGS应用
 
-## Stage_3 : Gaussian Splatting Application
+### **可视化**
 
-### **VIEWER**
-
- Object | Introduction | UserGuide |
+ 项目 | 介绍 | 使用说明 |
  ---- | ---- | ----
- [SIBR](https://sibr.gitlabpages.inria.fr/) | Official 3DGS Viewer | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
- [SuperSplat](https://github.com/playcanvas/supersplat) <br> (**recommended**)| SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
- [LCC Viewer](https://xgrids.cn/support/download?page=LCCViewer) | Lightweight viewer for LCC models with measurement tools and annotation capabilities, optimized for project review and collaboration. | [website](https://xgrids.com/support/download?page=LCCViewer)
+ [SIBR](https://sibr.gitlabpages.inria.fr/) | 官方3DGS可视化工具 | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
+ [SuperSplat](https://github.com/playcanvas/supersplat) <br> (**recommended**)| SuperSplat是一款免费且开源的工具，用于检查、编辑、优化和发布3D高斯斑点。它基于网络技术构建，可在浏览器中运行，因此无需下载或安装。 | [live version](https://superspl.at/editor)
+ [LCC Viewer](https://xgrids.cn/support/download?page=LCCViewer) | 其余创新的一款轻量级的LCC模型查看器，配备测量工具和注释功能，专为项目审查和协作而优化。 | [website](https://xgrids.com/support/download?page=LCCViewer)
  
-### **Creativefield**
- SoftWare | Object | UserGuide |
+### **创作领域**
+ 软件 | 项目 | 简介 |
  ---- | ---- | ----
- [UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [XScene-UEPlugin](https://github.com/xverse-engine/XScene-UEPlugin/tree/main) | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
- [Blender](https://github.com/playcanvas/supersplat) + 3DGSPlugin | [KIRI_BlenderPlugin](https://github.com/Kiri-Innovation/3dgs-render-blender-addon) <br> [mediastormDev-BlenderNode](https://github.com/mediastormDev/Blender-3DGS-4DGS-Viewer-Node)| 
+ [UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [XScene-UEPlugin](https://github.com/xverse-engine/XScene-UEPlugin/tree/main) | 对高斯飞溅模型提供了实时可视化、管理、编辑以及可扩展的混合渲染功能，这是一种从多视图照片重建3D场景的新技术。
+ [Blender](https://github.com/playcanvas/supersplat) + 3DGSPlugin | [KIRI_BlenderPlugin](https://github.com/Kiri-Innovation/3dgs-render-blender-addon) <br> | 1.在熟悉的环境中使用3DGS内容。<br>2.在3DGS转换之前编辑和优化点云。<br>3.创建动画和动态图形。<br>4.物体对光线做出反应并投射阴影。|
+ [Blender](https://github.com/playcanvas/supersplat) + 3DGS +4DG ViewerNode |[mediastormDev-BlenderNode](https://github.com/mediastormDev/Blender-3DGS-4DGS-Viewer-Node) | 影视飓风在4DGS云冈石窟项目中开发的一个自定义Blender节点。该节点支持加载和预览3DGS和4DGS数据集，并提供基本渲染样式以供快速检查。
+ etc. |  **......**
+ 
 
 
 
-### **Production**
- Object | Introduction | UserGuide |
+### **工程领域**
+ 项目 | 简介 | 使用说明 |
  ---- | ---- | ----
- [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started) | Official 3DGS Viewer | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
- [Blender](https://www.blender.org/) | SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
-
-## FAQ
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+ [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started) | NVIDIA Omniverse是一个包含API、服务和软件开发工具包（SDK）的平台，它使开发人员能够为工业数字化构建支持生成式人工智能的工具、应用程序和服务。 | [SDK](https://docs.nvidia.com/omniverse/index.html#get-started)
+ [NVIDIA Isaac](https://developer.nvidia.com/isaac) | 准备好开始开发您的AI机器人了吗？NVIDIA Isaac™平台提供了您所需的NVIDIA CUDA加速库、应用框架和AI模型，助您打造自主移动机器人（AMR）、机械臂和机械手、人形机器人等。 | [github](https://github.com/nvidia-isaac) |
+ [OpenUSD](https://developer.nvidia.com/usd?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.usd_resources%3Adesc%2Ctitle%3Aasc&hitsPerPage=6) |  OpenUSD由皮克斯动画工作室开发，是一个用于创建、模拟3D世界并进行协作的开源框架。OpenUSD是NVIDIA Omniverse™的基础，NVIDIA Omniverse™是一个用于开发工业数字化和生成式物理人工智能3D应用的平台。 | [DOC](https://developer.nvidia.com/usd?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.usd_resources%3Adesc%2Ctitle%3Aasc&hitsPerPage=6#section-getting-started)
+  etc. |  **......**
 
 ## Acknowledgments
 
-This project is built upon [3DGS](https://github.com/graphdeco-inria/gaussian-splatting).  We thank all the authors for their great repos.
+本项目基于[3DGS](https://github.com/graphdeco-inria/gaussian-splatting)构建。我们感谢所有作者提供的优秀资源。
+
+## Contributing
+
+非常感谢您为开源社区的3DGS项目所做的贡献！
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h3 class="title">BibTeX</h3>
+    <pre><code>@Article{kerbl3Dgaussians,
+      author       = {Kerbl, Bernhard and Kopanas, Georgios and Leimk{\"u}hler, Thomas and Drettakis, George},
+      title        = {3D Gaussian Splatting for Real-Time Radiance Field Rendering},
+      journal      = {ACM Transactions on Graphics},
+      number       = {4},
+      volume       = {42},
+      month        = {July},
+      year         = {2023},
+      url          = {https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/}
+}</code></pre>
+  </div>
+</section>
+
+## License
+
+本项目采用MIT许可证授权 - 详情请参阅[LICENSE.md](LICENSE)文件。
