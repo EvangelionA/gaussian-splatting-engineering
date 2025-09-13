@@ -8,7 +8,7 @@
 
 [English](../README.md) | 中文
 
-# Introduction
+# 介绍
   这个项目的目的是为了解决当前3DGS在学术探索与工程化部署的差距。当前大部分的论文都侧重于理论创新，而本项目则侧重于：
 
 1. **工程化实现**
@@ -19,14 +19,14 @@
 
 **该项目构建基于 [3DGS](https://github.com/graphdeco-inria/gaussian-splatting).**
 
-## TODO_LIST
-- improvement (改进项)
+## 待办事项
+- 优化项
   - [ ] [ABS-GS](https://github.com/TY424/AbsGS)
   - [ ] [RAIN-GS](https://github.com/whuhxb/RAIN-GS)
-- format support （格式支持）
+- 格式支持
   - [ ] [USDZ format](https://github.com/nv-tlabs/3dgrut) / [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started)
   - [ ] [SPZ format](https://github.com/nianticlabs/spz)
-- doc support （文档支持）
+- 文档支持
   - [ ] pipeline Instructions (WIP)
   - [ ] [colmap](https://github.com/TY424/AbsGS)
     - [ ] [USER GUID]
@@ -35,20 +35,20 @@
   - [ ] [KIRI](https://github.com/TY424/AbsGS)
 
 
-# Improvement Item Description
-## Improverment
- Paper | Introduction | TestResults |
+# 优化项说明
+## 优化项
+ 论文 | 介绍 | 测试结果 |
  ---- | ---- | ----
  [ABS-GS](https://github.com/TY424/AbsGS) | 揭示3DGS中原有的自适应密度控制策略存在梯度冲突问题，该缺陷会导致性能下降，并提出以同向梯度作为致密化的指导。| [result](datatest/abs-gs/)
  [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | 使用简单有效的策略包括稀疏大方差（SLV）随机初始化、渐进式高斯低通滤波器控制以及自适应边界扩展分割（ABE-Split）算法，即使从随机点云开始，也能稳健地引导3D高斯模型对场景进行建模。 | [result](datatest/rain-gs/)
 
-## Format Support
- format | Introduction | 
+## 格式支持
+ 格式 | 说明 | 
  ---- | ---- 
  [USDZ](https://github.com/nv-tlabs/3dgrut) | 通用场景描述（USD）是一个用于交换3D计算机图形数据的框架。该框架侧重于协作、无损编辑，以及支持对图形数据的多种视角。
  [SPZ](https://github.com/nianticlabs/spz) | SPZ编码的splats文件通常比相应的.ply文件小约10倍，两者之间的视觉差异极小。
 
-## Project Structure
+## 项目结构
 ```text
 📦 gaussian-splatting-engineering
 ├─ 📁 docs
@@ -78,8 +78,8 @@
 ```
 
 
-# Gaussian-Splatting PIPELINE
-## Stage_1 : Accurate Camera Pose [*Crucial*]
+# Gaussian-Splatting 流程
+## Stage_1 : 精准的相机位姿 [**关键**]
 **没有精准的位姿就没有好的结果**
 
 无论是3DGS项目还是传统的摄影测量技术，如SFM、MVS等，前期工作都涉及获取足够精确的相机位姿。这一步至关重要，因为这一步中的任何误差都会直接影响后续的重建结果。
@@ -95,7 +95,7 @@
 
 
 **前馈网络**：
- paper | Introduction | 
+ 论文 | 介绍 | 
  ---- | ---- 
  [VGGT](https://github.com/facebookresearch/vggt) | 视觉几何接地变换器（VGGT，CVPR 2025）是一种前馈神经网络，能在几秒钟内直接从场景的一个、几个或数百个视角推断出场景的所有关键3D属性，包括外部和内部相机参数、点图、深度图和3D点轨迹。
  [DUST3R](https://github.com/naver/dust3r) | 用于从任意图像集合中进行密集3D重建，无需事先进行相机校准或获取姿态信息。该方法将成对重建表述为点云的回归问题，从而统一了单目和双目情况。对于多图像输入，采用全局对齐策略将成对的点云对齐到一个共同的框架中。DUSt3R基于Transformer编码器/解码器构建，能够直接生成3D模型和深度图，同时恢复像素匹配和相机参数。实验表明，在单目/多视图深度估计和相对姿态估计任务中，DUSt3R均展现了最先进的性能。
@@ -105,18 +105,18 @@
   
 
 
-## Stage_2 : Gaussian Splatting Training(WIP)
+## Stage_2 : Gaussian Splatting 训练
 
-**software(incomplete)**
+**软件(持续更新)**
  商业免费 | 移动端 | 
  ---- | ---- 
 [postshot](https://www.jawset.com/) <br> (recommended) | [KIRI Engine](https://www.kiriengine.app/)
 [DJI TERRA](https://enterprise.dji.com/cn/dji-terra) | [Polycam](https://poly.cam/)
 
 
-### Getting Started
+### 开始
 
-### Installing
+### 安装
 
 参考 [gaussian-splatting](https://github.com/graphdeco-inria/gaussian-splatting#setup)
 
@@ -149,11 +149,11 @@
  [OpenUSD](https://developer.nvidia.com/usd?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.usd_resources%3Adesc%2Ctitle%3Aasc&hitsPerPage=6) |  OpenUSD由皮克斯动画工作室开发，是一个用于创建、模拟3D世界并进行协作的开源框架。OpenUSD是NVIDIA Omniverse™的基础，NVIDIA Omniverse™是一个用于开发工业数字化和生成式物理人工智能3D应用的平台。 | [DOC](https://developer.nvidia.com/usd?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.usd_resources%3Adesc%2Ctitle%3Aasc&hitsPerPage=6#section-getting-started)
   etc. |  **......**
 
-## Acknowledgments
+## 致谢
 
 本项目基于[3DGS](https://github.com/graphdeco-inria/gaussian-splatting)构建。我们感谢所有作者提供的优秀资源。
 
-## Contributing
+## 贡献
 
 非常感谢您为开源社区的3DGS项目所做的贡献！
 
@@ -173,6 +173,6 @@
   </div>
 </section>
 
-## License
+## 许可
 
 本项目采用MIT许可证授权 - 详情请参阅[LICENSE.md](LICENSE)文件。
