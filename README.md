@@ -1,12 +1,13 @@
 <h1 align="center">gaussian-splatting-engineering</h1>
 <p align="center">
-  <img src="https://img.shields.io/badge/Author-EvangelionA-orange" alt="Author" />
+  <a href="https://evangeliona.github.io/"><img src="https://img.shields.io/badge/Project Page-gaussian splatting engineering-red.svg" alt="Project Page"/></a>
+  <img src="https://img.shields.io/badge/Author-EvangelionA-yellow" alt="Author" />
   <a href="./README.md"><img src="https://img.shields.io/badge/Doc-English-blue.svg" alt="ZH doc"/></a>
-  <a href="docs/README_CN.md"><img src="https://img.shields.io/badge/Doc-中文WIP-blue.svg" alt="ZH doc"/></a>
+  <a href="docs/README_CN.md"><img src="https://img.shields.io/badge/Doc-中文-blue.svg" alt="ZH doc"/></a>
 </p>
 <hr>
 
-English | [中文-WIP](docs/README_CN.md)
+English | [中文](docs/README_CN.md)
 
 # Introduction
   This repository aims to bridge the gap between academic research and industrial deployment of 3D Gaussian Splatting (3DGS) technology. While most existing papers focus on theoretical innovations, this project emphasizes:
