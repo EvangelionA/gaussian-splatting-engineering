@@ -45,7 +45,7 @@ English | [中文](docs/README_CN.md)
     <img src="./dataTestResult/colmap/kitti_07_3dgs.gif" alt="kitti_07_3dgs" style="width:100%; max-width:1200px;">
 </p>
 <p align="center">
-    <img src="./dataTestResult/colmap/kitti_07_colamp.png" alt="kitti_07_colamp" style="width:100%; max-width:1200px;">
+    <img src="./dataTestResult/colmap/kitti_07_colamp.png" alt="kitti_07_colamp" style="width:50%; max-width:1200px;">
 </p>
 
 ## Instructions
