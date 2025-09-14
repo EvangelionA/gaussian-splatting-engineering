@@ -40,6 +40,15 @@ English | [中文](docs/README_CN.md)
   - [x] Google Drive
   - [x] Baidu Disk
 
+# Presentation
+
+## Instructions
+The test data is sourced from the KITTI dataset.
+ Release Version| Introduction | 
+ ---- | ---- 
+ 0.0.0 |  3DGS baseline
+
+
 
 # Improvement Item Description
 ## Improverment
