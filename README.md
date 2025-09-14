@@ -42,7 +42,9 @@ English | [中文](docs/README_CN.md)
 
 # Presentation
 <p align="center">
-    <img src="./dataTestResult/colmap/kitti_07_3dgs.gif" alt="kitti_07_3dgs" style="width:100%; max-width:1200px;">
+    <img src="./dataTestResult/colmap/kitti_07_3dgs_sibr_1.gif" alt="kitti_07_3dgs_sibr_1" style="width:100%; max-width:1200px;">
+    <img src="./dataTestResult/colmap/kitti_07_3dgs_supersplat_1.gif" alt="kitti_07_3dgs_supersplat_1" style="width:49.5%; max-width:1200px;">
+    <img src="./dataTestResult/colmap/kitti_07_3dgs_supersplat_2.gif" alt="kitti_07_3dgs_supersplat_2" style="width:49.5%; max-width:1200px;">
 </p>
 <p align="center">
     <img src="./dataTestResult/colmap/kitti_07_colamp.png" alt="kitti_07_colamp" style="width:50%; max-width:1200px;">
