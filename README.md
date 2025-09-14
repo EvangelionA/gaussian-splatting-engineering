@@ -41,14 +41,11 @@ English | [中文](docs/README_CN.md)
   - [x] Baidu Disk
 
 # Presentation
-<p align="center">
-    <img src="./dataTestResult/colmap/kitti_07_3dgs_sibr_1.gif" alt="kitti_07_3dgs_sibr_1" style="width:100%; max-width:1200px;">
-    <img src="./dataTestResult/colmap/kitti_07_3dgs_supersplat_1.gif" alt="kitti_07_3dgs_supersplat_1" style="width:49.5%; max-width:1200px;">
-    <img src="./dataTestResult/colmap/kitti_07_3dgs_supersplat_2.gif" alt="kitti_07_3dgs_supersplat_2" style="width:49.5%; max-width:1200px;">
-</p>
-<p align="center">
-    <img src="./dataTestResult/colmap/kitti_07_colamp.png" alt="kitti_07_colamp" style="width:50%; max-width:1200px;">
-</p>
+<a><img src="./dataTestResult/colmap/kitti_07_3dgs_sibr_1.gif"> </a>
+<a><img height="156"  src="./dataTestResult/colmap/kitti_07_3dgs_supersplat_1.gif"> </a>
+<a><img height="156" src="./dataTestResult/colmap/kitti_07_3dgs_supersplat_2.gif"> </a>
+<a><img height="156" src="./dataTestResult/colmap/kitti_07_colamp.png"> </a>
+
 
 ## Instructions
 The test data is sourced from the KITTI dataset.
