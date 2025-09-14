@@ -1,6 +1,6 @@
 <h1 align="center">gaussian-splatting-engineering</h1>
 <p align="center">
-  <a href="https://evangeliona.github.io/"><img src="https://img.shields.io/badge/项目主页-gaussian splatting engineering-red.svg" alt="Project Page"/></a>
+  <a href="https://evangeliona.github.io/"><img src="https://img.shields.io/badge/项目主页-gaussian splatting engineering WIP-red.svg" alt="Project Page"/></a>
   <img src="https://img.shields.io/badge/作者-EvangelionA-orange" alt="Author" />
   <a href="./README.md"><img src="https://img.shields.io/badge/文档-English-blue.svg" alt="EN doc"/></a>
   <a href="docs/README_CN.md"><img src="https://img.shields.io/badge/文档-中文-blue.svg" alt="ZH doc"/></a>
