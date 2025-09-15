@@ -78,6 +78,11 @@ English | [中文](docs/README_CN.md)
 ```text
 📦 gaussian-splatting-engineering
 ├─ 📁 dataTestResult
+│  ├─ 3dgs-origin/
+│  ├─ abs-gs/
+│  ├─ colmap/
+│  ├─ improve-gs/
+│  ├─ rain-gs/
 ├─ 📁 docs
 │  └─ README_CN.md              
 ├─ 📁 gaussian-splatting-main

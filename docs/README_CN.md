@@ -78,6 +78,12 @@
 ## 项目结构
 ```text
 📦 gaussian-splatting-engineering
+├─ 📁 dataTestResult
+│  ├─ 3dgs-origin/
+│  ├─ abs-gs/
+│  ├─ colmap/
+│  ├─ improve-gs/
+│  ├─ rain-gs/
 ├─ 📁 docs
 │  └─ README_CN.md              
 ├─ 📁 gaussian-splatting-main
