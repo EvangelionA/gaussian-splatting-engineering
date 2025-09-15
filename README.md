@@ -56,6 +56,7 @@ English | [中文](docs/README_CN.md)
  dataset| description | 
  ---- | ---- 
  KITTI |  The autonomous driving dataset has an image resolution of 1226x370. Due to its forward-motion scanning method, its depth maps contain significant errors. Furthermore, the lack of multi-view information means that its 3DGS results are only favorable from the original capture viewpoints.
+smith_hall_outdoor_dataset-20240117T153219Z-001| 
 
 ### Release Version Description
  Release Version| Description | 
