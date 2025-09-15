@@ -51,7 +51,13 @@
 <a><img height="50%" width="50%" src="../dataTestResult/colmap/kitti_07_colamp.png"> </a>
 
 ## 说明
-该测试数据来源与KITTI数据集。
+
+### 数据集说明
+ 数据集| 说明 | 
+ ---- | ---- 
+ KITTI |  自动驾驶数据集，其图像分辨率为1226*370，因为其扫描方式为前向扫描(fordward-motion)，因此其深度图存在较大的误差，同样的缺乏多视角信息，其3dgs效果只在采集视角下表现较好。
+
+### 测试版本说明
  发布版本| 说明 | 
  ---- | ---- 
  0.0.0 |  3DGS baseline

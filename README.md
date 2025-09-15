@@ -49,12 +49,16 @@ English | [中文](docs/README_CN.md)
 <a><img height="50%" width="50%" src="./dataTestResult/colmap/kitti_07_colamp.png"> </a>
 
 ## Instructions
-The test data is sourced from the KITTI dataset.
- Release Version| Introduction | 
+
+### DataSet Description
+ dataset| description | 
+ ---- | ---- 
+ KITTI |  The autonomous driving dataset has an image resolution of 1226x370. Due to its forward-motion scanning method, its depth maps contain significant errors. Furthermore, the lack of multi-view information means that its 3DGS results are only favorable from the original capture viewpoints.
+
+### Release Version Description
+ Release Version| Description | 
  ---- | ---- 
  0.0.0 |  3DGS baseline
-
-
 
 # Improvement Item Description
 ## Improverment
