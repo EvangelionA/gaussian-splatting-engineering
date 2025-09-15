@@ -45,8 +45,10 @@ English | [中文](docs/README_CN.md)
 <a><img width="100%" src="./dataTestResult/colmap/kitti_07_3dgs_sibr_1.gif"> </a>
 <a><img height="50%" width="49.7%" src="./dataTestResult/colmap/kitti_07_3dgs_supersplat_1.gif"> </a>
 <a><img height="50%" width="49.7%" src="./dataTestResult/colmap/kitti_07_3dgs_supersplat_2.gif"> </a>
+<a><img height="50%" width="49.7%" src="./dataTestResult/colmap/kitti_07_colamp.png"> </a>
+<a><img height="50%" width="49.7%" src="./dataTestResult/colmap/smith_hall_outdoor_dataset_colamp.png"> </a>
 </div>
-<a><img height="50%" width="50%" src="./dataTestResult/colmap/kitti_07_colamp.png"> </a>
+
 
 ## Instructions
 
