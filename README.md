@@ -43,20 +43,25 @@ English | [中文](docs/README_CN.md)
 # Presentation
 <div align="center">
 <a><img width="100%" src="./dataTestResult/colmap/kitti_07_3dgs_sibr_1.gif"> </a>
+<center><b><font size ='3'>KITTI_07_SIBR</font></b></center></font>
 <a><img height="50%" width="49.7%" src="./dataTestResult/colmap/kitti_07_3dgs_supersplat_1.gif"> </a>
+<center><b><font size ='3'>KITTI_07_Supersplat_1</font></b></center></font>
 <a><img height="50%" width="49.7%" src="./dataTestResult/colmap/kitti_07_3dgs_supersplat_2.gif"> </a>
+<center><b><font size ='3'>KITTI_07_Supersplat_2</font></b></center></font>
 <a><img height="50%" width="49.7%" src="./dataTestResult/colmap/kitti_07_colamp.png"> </a>
+<center><b><font size ='3'>KITTI_07_colmap</font></b></center></font>
 <a><img height="50%" width="49.7%" src="./dataTestResult/colmap/smith_hall_outdoor_dataset_colamp.png"> </a>
+<center><b><font size ='3'>KITTI_07_colmap</font></b></center></font>
 </div>
 
 
 ## Instructions
 
 ### DataSet Description
- dataset| description | 
- ---- | ---- 
- KITTI |  The autonomous driving dataset has an image resolution of 1226x370. Due to its forward-motion scanning method, its depth maps contain significant errors. Furthermore, the lack of multi-view information means that its 3DGS results are only favorable from the original capture viewpoints.
-smith_hall_outdoor_dataset-20240117T153219Z-001| 
+ dataset| description | resolution |
+ ---- | ---- | ----
+ KITTI | Autonomous driving dataset . Due to its forward-motion scanning method, its depth maps contain significant errors. Furthermore, the lack of multi-view information means that its 3DGS results are only favorable from the original capture viewpoints. | 1226x370 |
+smith_hall_outdoor_dataset-20240117T153219Z-001| This dataset from [CMU-Recon system](https://www.cmu-reconstruction.com/).CMU-Recon system builds realistic models of real-world environments by leveraging high-fidelity lidar scans and RGB images. | 4032x3024 |
 
 ### Release Version Description
  Release Version| Description | 

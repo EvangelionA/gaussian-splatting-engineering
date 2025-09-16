@@ -45,19 +45,24 @@
 # 展示
 <div align="center">
 <a><img width="100%" src="../dataTestResult/colmap/kitti_07_3dgs_sibr_1.gif"> </a>
+<center><b><font size ='3'>KITTI_07_SIBR</font></b></center></font>
 <a><img height="50%" width="49.7%" src="../dataTestResult/colmap/kitti_07_3dgs_supersplat_1.gif"> </a>
+<center><b><font size ='3'>KITTI_07_Supersplat_1</font></b></center></font>
 <a><img height="50%" width="49.7%" src="../dataTestResult/colmap/kitti_07_3dgs_supersplat_2.gif"> </a>
+<center><b><font size ='3'>KITTI_07_Supersplat_2</font></b></center></font>
 <a><img height="50%" width="49.7%" src="../dataTestResult/colmap/kitti_07_colamp.png"> </a>
+<center><b><font size ='3'>KITTI_07_colmap</font></b></center></font>
 <a><img height="50%" width="49.7%" src="../dataTestResult/colmap/smith_hall_outdoor_dataset_colamp.png"> </a>
+<center><b><font size ='3'>KITTI_07_colmap</font></b></center></font>
 </div>
 
 ## 说明
 
 ### 数据集说明
- 数据集| 说明 | 
- ---- | ---- 
- KITTI |  自动驾驶数据集，其图像分辨率为1226*370，因为其扫描方式为前向扫描(fordward-motion)，因此其深度图存在较大的误差，同样的缺乏多视角信息，其3dgs效果只在采集视角下表现较好。
- smith_hall_outdoor_dataset-20240117T153219Z-001| 
+ 数据集| 说明 | 分辨率 |
+ ---- | ---- | ---- |
+ KITTI |  自动驾驶数据集，因为其扫描方式为前向扫描(fordward-motion)，因此其深度图存在较大的误差，同样的缺乏多视角信息，其3dgs效果只在采集视角下表现较好。 | 1226x370|
+ smith_hall_outdoor_dataset-20240117T153219Z-001| CMU-Recon 系统利用高保真激光雷达扫描和 RGB 图像构建真实环境的3D重建。| 4032x3024 |
 
 ### 测试版本说明
  发布版本| 说明 | 
