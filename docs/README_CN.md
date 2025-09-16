@@ -44,16 +44,11 @@
 
 # 展示
 <div align="center">
-<a><img width="100%" src="../dataTestResult/colmap/kitti_07_3dgs_sibr_1.gif"> </a>
-<center><b><font size ='3'>KITTI_07_SIBR</font></b></center></font>
-<a><img height="50%" width="49.7%" src="../dataTestResult/colmap/kitti_07_3dgs_supersplat_1.gif"> </a>
-<center><b><font size ='3'>KITTI_07_Supersplat_1</font></b></center></font>
-<a><img height="50%" width="49.7%" src="../dataTestResult/colmap/kitti_07_3dgs_supersplat_2.gif"> </a>
-<center><b><font size ='3'>KITTI_07_Supersplat_2</font></b></center></font>
-<a><img height="50%" width="49.7%" src="../dataTestResult/colmap/kitti_07_colamp.png"> </a>
-<center><b><font size ='3'>KITTI_07_colmap</font></b></center></font>
-<a><img height="50%" width="49.7%" src="../dataTestResult/colmap/smith_hall_outdoor_dataset_colamp.png"> </a>
-<center><b><font size ='3'>KITTI_07_colmap</font></b></center></font>
+<a><img width="100%" alt= "kitti_07_3dgs_sibr_1.gif" src="../dataTestResult/colmap/kitti_07_3dgs_sibr_1.gif"> </a>
+<a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_1.gif" src="../dataTestResult/colmap/kitti_07_3dgs_supersplat_1.gif"> </a>
+<a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_2.gif" src="../dataTestResult/colmap/kitti_07_3dgs_supersplat_2.gif"> </a>
+<a><img height="50%" width="49.7%" alt= "kitti_07_colamp.gif" src="../dataTestResult/colmap/kitti_07_colamp.png"> </a>
+<a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_dataset_colamp.gif" src="../dataTestResult/colmap/smith_hall_outdoor_dataset_colamp.png"> </a>
 </div>
 
 ## 说明
