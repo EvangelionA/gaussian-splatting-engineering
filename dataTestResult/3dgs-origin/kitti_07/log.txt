@@ -1,0 +1,13 @@
+Loading Training Cameras [17/09 21:14:34]
+Loading Test Cameras [17/09 21:14:39]
+Number of points at initialisation :  45965 [17/09 21:14:39]
+
+[ITER 7000] Evaluating train: L1 0.034893324971199034 PSNR 23.042438888549807 [17/09 21:20:58]
+
+[ITER 7000] Saving Gaussians [17/09 21:20:58]
+
+[ITER 30000] Evaluating train: L1 0.020077964477241042 PSNR 28.497931289672852 [17/09 21:55:39]
+
+[ITER 30000] Saving Gaussians [17/09 21:55:39]
+
+Training complete. [17/09 21:55:48]

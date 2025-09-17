@@ -44,20 +44,19 @@
 
 # 展示
 <div align="center">
-<a><img width="100%" alt= "kitti_07_3dgs_sibr_1.gif" src="../dataTestResult/colmap/kitti_07_3dgs_sibr_1.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_1.gif" src="../dataTestResult/colmap/kitti_07_3dgs_supersplat_1.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_2.gif" src="../dataTestResult/colmap/kitti_07_3dgs_supersplat_2.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "kitti_07_colamp.gif" src="../dataTestResult/colmap/kitti_07_colamp.png"> </a>
-<a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_dataset_colamp.gif" src="../dataTestResult/colmap/smith_hall_outdoor_dataset_colamp.png"> </a>
+<a><img width="100%" alt= "kitti_07_3dgs_sibr_1.gif" src="../dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_sibr_1.gif"> </a>
+<a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_1.gif" src="../dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_supersplat_1.gif"> </a>
+<a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_2.gif" src="../dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_supersplat_2.gif"> </a>
+<a><img height="50%" width="49.7%" alt= "kitti_07_colamp.gif" src="../dataTestResult/colmap/kitti_07/kitti_07_colamp.png"> </a>
+<a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_dataset_colamp.gif" src="../dataTestResult/colmap/smith_hall_outdoor/smith_hall_outdoor_dataset_colamp.png"> </a>
 </div>
 
 ## 说明
-
 ### 数据集说明
- 数据集| 说明 | 分辨率 |
- ---- | ---- | ---- |
- KITTI |  自动驾驶数据集，因为其扫描方式为前向扫描(fordward-motion)，因此其深度图存在较大的误差，同样的缺乏多视角信息，其3dgs效果只在采集视角下表现较好。 | 1226x370|
- smith_hall_outdoor_dataset-20240117T153219Z-001| CMU-Recon 系统利用高保真激光雷达扫描和 RGB 图像构建真实环境的3D重建。| 4032x3024 |
+ 数据集| 说明 | 分辨率 | 数量 | PSNR | LOG
+ ---- | ---- | ---- | ---- | ---- | ---- |
+ KITTI |  自动驾驶数据集，因为其扫描方式为前向扫描(fordward-motion)，因此其深度图存在较大的误差，同样的缺乏多视角信息，其3dgs效果只在采集视角下表现较好。 | 1226x370 | 200 | 28.50 | [log.txt](../dataTestResult/3dgs-origin/kitti_07/log.txt)
+ smith_hall_outdoor_dataset-20240117T153219Z-001| CMU-Recon 系统利用高保真激光雷达扫描和 RGB 图像构建真实环境的3D重建。| 4032x3024 (1/8) | 450 | 24.85 | [log.txt](../dataTestResult/3dgs-origin/smith_hall_outdoor/log.txt)
 
 ### 测试版本说明
  发布版本| 说明 | 
