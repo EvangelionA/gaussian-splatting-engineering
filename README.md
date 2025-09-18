@@ -43,8 +43,11 @@ English | [中文](docs/README_CN.md)
 # Presentation
 <div align="center">
 <a><img width="100%" alt= "kitti_07_3dgs_sibr_1.gif" src="./dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_sibr_1.gif"> </a>
+<a><img width="100%" alt= "smith_hall_outdoor_3dgs_sibr_1.gif" src="./dataTestResult/3dgs-origin/smith_hall_outdoor/smith_hall_outdoor_3dgs_sibr_1.gif"> </a>
 <a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_1.gif" src="./dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_supersplat_1.gif"> </a>
 <a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_2.gif" src="./dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_supersplat_2.gif"> </a>
+<a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_3dgs_supersplat_1.gif" src="./dataTestResult/3dgs-origin/smith_hall_outdoor/smith_hall_outdoor_3dgs_supersplat_1.gif"> </a>
+<a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_3dgs_supersplat_2.gif" src="./dataTestResult/3dgs-origin/smith_hall_outdoor/smith_hall_outdoor_3dgs_supersplat_2.gif"> </a>
 <a><img height="50%" width="49.7%" alt= "kitti_07_colamp.gif" src="./dataTestResult/colmap/kitti_07/kitti_07_colamp.png"> </a>
 <a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_dataset_colamp.gif" src="./dataTestResult/colmap/smith_hall_outdoor/smith_hall_outdoor_dataset_colamp.png"> </a>
 </div>
@@ -53,10 +56,10 @@ English | [中文](docs/README_CN.md)
 ## Instructions
 
 ### DataSet Description
- dataset| description | resolution| number | PSNR | LOG
- ---- | ---- | ---- | ---- | ---- | ---- |
- KITTI | Autonomous driving dataset . Due to its forward-motion scanning method, its depth maps contain significant errors. Furthermore, the lack of multi-view information means that its 3DGS results are only favorable from the original capture viewpoints. | 1226x370| 200 | 28.50 | [log.txt](./dataTestResult/3dgs-origin/kitti_07/log.txt)
-smith_hall_outdoor_dataset-20240117T153219Z-001| This dataset from [CMU-Recon system](https://www.cmu-reconstruction.com/).CMU-Recon system builds realistic models of real-world environments by leveraging high-fidelity lidar scans and RGB images. | 4032x3024 (1/8) | 450 | 24.85 | [log.txt](./dataTestResult/3dgs-origin/smith_hall_outdoor/log.txt)
+ dataset| description | resolution| number | iters | PSNR | LOG
+ ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+ KITTI | Autonomous driving dataset . Due to its forward-motion scanning method, its depth maps contain significant errors. Furthermore, the lack of multi-view information means that its 3DGS results are only favorable from the original capture viewpoints. | 1226x370| 200 | 30000 | 28.50 | [log.txt](./dataTestResult/3dgs-origin/kitti_07/log.txt)
+smith_hall_outdoor_dataset-20240117T153219Z-001| This dataset from [CMU-Recon system](https://www.cmu-reconstruction.com/).CMU-Recon system builds realistic models of real-world environments by leveraging high-fidelity lidar scans and RGB images. | 4032x3024 (1/8) | 450 | 30000 | 24.85 | [log.txt](./dataTestResult/3dgs-origin/smith_hall_outdoor/log.txt)
 
 ### Release Version Description
  Release Version| Description | 
