@@ -150,6 +150,8 @@ openSource | commercial(free) | commercial | mobile
  ---- | ---- 
 [postshot](https://www.jawset.com/) <br> (recommended) | [KIRI Engine](https://www.kiriengine.app/)
 [DJI TERRA](https://enterprise.dji.com/cn/dji-terra) | [Polycam](https://poly.cam/)
+[Volinga](https://web.volinga.ai/#VolingaSuite) | 
+[Luma AI](https://lumalabs.ai/learning-hub) |
 
 
 
@@ -178,6 +180,7 @@ reference [gaussian-splatting](https://github.com/graphdeco-inria/gaussian-splat
  [UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [XScene-UEPlugin](https://github.com/xverse-engine/XScene-UEPlugin/tree/main) | It provides real-time visualization, management, editing, and scalable hybrid rendering of Gaussian Splatting models—a novel technique for reconstructing 3D scenes from multi-view photos. 
  [Blender](https://github.com/playcanvas/supersplat) + 3DGSPlugin | [KIRI_BlenderPlugin](https://github.com/Kiri-Innovation/3dgs-render-blender-addon) <br> | 1.Work with 3DGS content in a familiar environment.<br>2.Edit and optimize point clouds before 3DGS conversion.<br> 3.Create animations and motion graphics.<br>4.Objects react to lighting and cast shadows|
  [Blender](https://github.com/playcanvas/supersplat) + 3DGS +4DG ViewerNode |[mediastormDev-BlenderNode](https://github.com/mediastormDev/Blender-3DGS-4DGS-Viewer-Node) | A custom Blender node developed by Mediastorm during the ASUS 4DGS Yungang Grottoes project. Supports loading and previewing of 3DGS and 4DGS datasets, with basic rendering styles for quick inspection.
+ [Houdini](https://www.sidefx.com/) + GSOPs | [GSOPs](https://github.com/cgnomads/GSOPs) | GSOPs includes a real-time viewport renderer, example files, and a suite of digital assets for efficient import, editing, and export of 2D and 3D Gaussian splatting content.
  etc. |  **......**
  
 
