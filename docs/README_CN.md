@@ -149,6 +149,9 @@
  ---- | ---- 
 [postshot](https://www.jawset.com/) <br> (recommended) | [KIRI Engine](https://www.kiriengine.app/)
 [DJI TERRA](https://enterprise.dji.com/cn/dji-terra) | [Polycam](https://poly.cam/)
+[Volinga](https://web.volinga.ai/#VolingaSuite) | 
+[Luma AI](https://lumalabs.ai/learning-hub) |
+
 
 
 ### 开始
@@ -173,6 +176,7 @@
  [UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [XScene-UEPlugin](https://github.com/xverse-engine/XScene-UEPlugin/tree/main) | 对高斯飞溅模型提供了实时可视化、管理、编辑以及可扩展的混合渲染功能，这是一种从多视图照片重建3D场景的新技术。
  [Blender](https://github.com/playcanvas/supersplat) + 3DGSPlugin | [KIRI_BlenderPlugin](https://github.com/Kiri-Innovation/3dgs-render-blender-addon) <br> | 1.在熟悉的环境中使用3DGS内容。<br>2.在3DGS转换之前编辑和优化点云。<br>3.创建动画和动态图形。<br>4.物体对光线做出反应并投射阴影。|
  [Blender](https://github.com/playcanvas/supersplat) + 3DGS +4DG ViewerNode |[mediastormDev-BlenderNode](https://github.com/mediastormDev/Blender-3DGS-4DGS-Viewer-Node) | 影视飓风在4DGS云冈石窟项目中开发的一个自定义Blender节点。该节点支持加载和预览3DGS和4DGS数据集，并提供基本渲染样式以供快速检查。
+ [Houdini](https://www.sidefx.com/) + GSOPs | [GSOPs](https://github.com/cgnomads/GSOPs) | GSOPs包含一个实时视口渲染器、示例文件以及一套数字资源，用于高效导入、编辑和导出2D和3D高斯飞溅内容。
  etc. |  **......**
  
 
