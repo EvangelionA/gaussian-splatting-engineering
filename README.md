@@ -19,9 +19,9 @@ English | [中文](docs/README_CN.md)
 
 **This project is built upon [3DGS](https://github.com/graphdeco-inria/gaussian-splatting).**
 
-## TODO_LIST
+## 📅 TODO_LIST
 - **improvement**
-  - [ ] [ABS-GS](https://github.com/TY424/AbsGS)
+  - [X] [ABS-GS](https://github.com/TY424/AbsGS)
   - [ ] [RAIN-GS](https://github.com/whuhxb/RAIN-GS)
   - [ ] **......**
 - **format support**
@@ -52,26 +52,32 @@ English | [中文](docs/README_CN.md)
 <a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_dataset_colamp.gif" src="./dataTestResult/colmap/smith_hall_outdoor/smith_hall_outdoor_dataset_colamp.png"> </a>
 </div>
 
+# Result
+dataset| iters | 3DGS | ABS-GS | RAIN-GS
+ ---- | ---- | ---- | ---- | ---- | 
+ KITTI | 30000 | PSNR [28.50](./dataTestResult/3dgs-origin/kitti_07/log.txt)| PSNR [28.55](./dataTestResult/3dgs-abs/kitti_07/log.txt)|
+ smith_hall_outdoor | 30000 | PSNR [24.85](./dataTestResult/3dgs-origin/smith_hall_outdoor/log.txt)| PSNR [24.64](./dataTestResult/3dgs-abs/smith_hall_outdoor/log.txt)|
 
 ## Instructions
 
 ### DataSet Description
- dataset| description | resolution| number | iters | PSNR | LOG
- ---- | ---- | ---- | ---- | ---- | ---- | ---- |
- KITTI | Autonomous driving dataset . Due to its forward-motion scanning method, its depth maps contain significant errors. Furthermore, the lack of multi-view information means that its 3DGS results are only favorable from the original capture viewpoints. | 1226x370| 200 | 30000 | 28.50 | [log.txt](./dataTestResult/3dgs-origin/kitti_07/log.txt)
-smith_hall_outdoor_dataset-20240117T153219Z-001| This dataset from [CMU-Recon system](https://www.cmu-reconstruction.com/).CMU-Recon system builds realistic models of real-world environments by leveraging high-fidelity lidar scans and RGB images. | 4032x3024 (1/8) | 450 | 30000 | 24.85 | [log.txt](./dataTestResult/3dgs-origin/smith_hall_outdoor/log.txt)
+ dataset| description | resolution| number
+ ---- | ---- | ---- | ---- | 
+ KITTI | Autonomous driving dataset . Due to its forward-motion scanning method, its depth maps contain significant errors. Furthermore, the lack of multi-view information means that its 3DGS results are only favorable from the original capture viewpoints. | 1226x370| 200 |
+smith_hall_outdoor_dataset-20240117T153219Z-001| This dataset from [CMU-Recon system](https://www.cmu-reconstruction.com/).CMU-Recon system builds realistic models of real-world environments by leveraging high-fidelity lidar scans and RGB images. | 4032x3024 (1/8) | 450 |
 
 ### Release Version Description
  Release Version| Description | 
  ---- | ---- 
  0.0.0 |  3DGS baseline
+ 0.0.1 |  ABS-GS
 
 # Improvement Item Description
 ## Improverment
  Paper | Introduction | TestResults |
  ---- | ---- | ----
- [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. | [result-WIP](dataTestResult/abs-gs/)
- [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud. | [result-WIP](dataTestResult/rain-gs/)
+ [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. | [result](dataTestResult/abs-gs/)
+ [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud. | [result](dataTestResult/rain-gs/)
  etc. | **......**
 
 ## Format Support
@@ -118,7 +124,7 @@ smith_hall_outdoor_dataset-20240117T153219Z-001| This dataset from [CMU-Recon sy
 
 # Gaussian-Splatting PIPELINE
 ## Stage_1 : Accurate Camera Pose [*Crucial*]
-**!!! bad pose bad result**
+** ⚠️ !!! bad pose bad result**
 
 Whether it's the 3DGS project or traditional photographic surveying such as SFM, MVS, etc., the preliminary work involves obtaining sufficiently accurate camera poses. This step is crucial, as any errors in this step will directly affect the subsequent reconstruction results.
 
@@ -194,11 +200,11 @@ reference [gaussian-splatting](https://github.com/graphdeco-inria/gaussian-splat
  [OpenUSD](https://developer.nvidia.com/usd?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.usd_resources%3Adesc%2Ctitle%3Aasc&hitsPerPage=6) | Developed by Pixar Animation Studios, OpenUSD is an open-source framework for creating, simulating, and collaborating in 3D worlds. OpenUSD is foundational to NVIDIA Omniverse™, the platform for developing 3D applications for industrial digitalization and generative physical AI. | [DOC](https://developer.nvidia.com/usd?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.usd_resources%3Adesc%2Ctitle%3Aasc&hitsPerPage=6#section-getting-started)
   etc. |  **......**
 
-## Acknowledgments
+## 🎉 Acknowledgments
 
 This project is built upon [3DGS](https://github.com/graphdeco-inria/gaussian-splatting).  We thank all the authors for their great repos.
 
-## Contributing
+## 📚 Contributing
 
 Thank you very much for the contribution of the 3DGS project to the open source community!
 
