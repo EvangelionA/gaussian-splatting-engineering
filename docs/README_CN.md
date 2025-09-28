@@ -21,9 +21,9 @@
 **该项目构建基于 [3DGS](https://github.com/graphdeco-inria/gaussian-splatting).**
 
 
-## 待办事项
+## 📅 待办事项
 - **优化项**
-  - [ ] [ABS-GS](https://github.com/TY424/AbsGS)
+  - [x] [ABS-GS](https://github.com/TY424/AbsGS) *v0.0.1*
   - [ ] [RAIN-GS](https://github.com/whuhxb/RAIN-GS)
   - [ ] **......**
 - **格式支持**
@@ -42,7 +42,7 @@
   - [x] Google Drive
   - [x] Baidu Disk
 
-# 展示
+# Presentation
 <div align="center">
 <a><img width="100%" alt= "kitti_07_3dgs_sibr_1.gif" src="../dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_sibr_1.gif"> </a>
 <a><img width="100%" alt= "smith_hall_outdoor_3dgs_sibr_1.gif" src="../dataTestResult/3dgs-origin/smith_hall_outdoor/smith_hall_outdoor_3dgs_sibr_1.gif"> </a>
@@ -54,17 +54,24 @@
 <a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_dataset_colamp.gif" src="../dataTestResult/colmap/smith_hall_outdoor/smith_hall_outdoor_dataset_colamp.png"> </a>
 </div>
 
+# Result
+数据集| 迭代次数 | 3DGS | ABS-GS | RAIN-GS
+ ---- | ---- | ---- | ---- | ---- | 
+ KITTI | 30000 | PSNR [28.50](./dataTestResult/3dgs-origin/kitti_07/log.txt)| PSNR [28.55](./dataTestResult/3dgs-abs/kitti_07/log.txt)| ...
+ smith_hall_outdoor | 30000 | PSNR [24.85](./dataTestResult/3dgs-origin/smith_hall_outdoor/log.txt)| PSNR [24.64](./dataTestResult/3dgs-abs/smith_hall_outdoor/log.txt)| ...
+
 ## 说明
 ### 数据集说明
- 数据集| 说明 | 分辨率 | 数量 | 迭代次数 | PSNR | LOG
- ---- | ---- | ---- | ---- | ---- | ---- | ---- |
- KITTI |  自动驾驶数据集，因为其扫描方式为前向扫描(fordward-motion)，因此其深度图存在较大的误差，同样的缺乏多视角信息，其3dgs效果只在采集视角下表现较好。 | 1226x370 | 200 | 30000 | 28.50 | [log.txt](../dataTestResult/3dgs-origin/kitti_07/log.txt)
- smith_hall_outdoor_dataset-20240117T153219Z-001| CMU-Recon 系统利用高保真激光雷达扫描和 RGB 图像构建真实环境的3D重建。| 4032x3024 (1/8) | 450 | 30000 | 24.85 | [log.txt](../dataTestResult/3dgs-origin/smith_hall_outdoor/log.txt)
+ 数据集| 说明 | 分辨率 | 数量 | 
+ ---- | ---- | ---- | ---- |
+ KITTI |  自动驾驶数据集，因为其扫描方式为前向扫描(fordward-motion)，因此其深度图存在较大的误差，同样的缺乏多视角信息，其3dgs效果只在采集视角下表现较好。 | 1226x370 | 200 |
+ smith_hall_outdoor_dataset-20240117T153219Z-001| CMU-Recon 系统利用高保真激光雷达扫描和 RGB 图像构建真实环境的3D重建。| 4032x3024 (1/8) | 450 |
 
 ### 测试版本说明
  发布版本| 说明 | 
  ---- | ---- 
  0.0.0 |  3DGS baseline
+ 0.0.1 |  ABS-GS
 
 # 优化项说明
 ## 优化项
@@ -117,7 +124,7 @@
 
 # Gaussian-Splatting 流程
 ## Stage_1 : 精准的相机位姿 [**关键**]
-**没有精准的位姿就没有好的结果**
+**⚠️没有精准的位姿就没有好的结果**
 
 无论是3DGS项目还是传统的摄影测量技术，如SFM、MVS等，前期工作都涉及获取足够精确的相机位姿。这一步至关重要，因为这一步中的任何误差都会直接影响后续的重建结果。
 
@@ -174,6 +181,8 @@
  软件 | 项目 | 简介 |
  ---- | ---- | ----
  [UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [XScene-UEPlugin](https://github.com/xverse-engine/XScene-UEPlugin/tree/main) | 对高斯飞溅模型提供了实时可视化、管理、编辑以及可扩展的混合渲染功能，这是一种从多视图照片重建3D场景的新技术。
+[UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [3DGS-UE-SDK](https://github.com/SenseSpace-AI3D/3DGS-UE-SDK) | [商汤琼宇SenseSpace平台 3D Gaussian Splatting Unreal plugin](https://space.sensetime.com/home) **需要申请试用**
+|||
  [Blender](https://github.com/playcanvas/supersplat) + 3DGSPlugin | [KIRI_BlenderPlugin](https://github.com/Kiri-Innovation/3dgs-render-blender-addon) <br> | 1.在熟悉的环境中使用3DGS内容。<br>2.在3DGS转换之前编辑和优化点云。<br>3.创建动画和动态图形。<br>4.物体对光线做出反应并投射阴影。|
  [Blender](https://github.com/playcanvas/supersplat) + 3DGS +4DG ViewerNode |[mediastormDev-BlenderNode](https://github.com/mediastormDev/Blender-3DGS-4DGS-Viewer-Node) | 影视飓风在4DGS云冈石窟项目中开发的一个自定义Blender节点。该节点支持加载和预览3DGS和4DGS数据集，并提供基本渲染样式以供快速检查。
  [Houdini](https://www.sidefx.com/) + GSOPs | [GSOPs](https://github.com/cgnomads/GSOPs) | GSOPs包含一个实时视口渲染器、示例文件以及一套数字资源，用于高效导入、编辑和导出2D和3D高斯飞溅内容。
@@ -190,11 +199,11 @@
  [OpenUSD](https://developer.nvidia.com/usd?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.usd_resources%3Adesc%2Ctitle%3Aasc&hitsPerPage=6) |  OpenUSD由皮克斯动画工作室开发，是一个用于创建、模拟3D世界并进行协作的开源框架。OpenUSD是NVIDIA Omniverse™的基础，NVIDIA Omniverse™是一个用于开发工业数字化和生成式物理人工智能3D应用的平台。 | [DOC](https://developer.nvidia.com/usd?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.usd_resources%3Adesc%2Ctitle%3Aasc&hitsPerPage=6#section-getting-started)
   etc. |  **......**
 
-## 致谢
+## 🎉 致谢
 
 本项目基于[3DGS](https://github.com/graphdeco-inria/gaussian-splatting)构建。我们感谢所有作者提供的优秀资源。
 
-## 贡献
+## 📚 贡献
 
 非常感谢您为开源社区的3DGS项目所做的贡献！
 
