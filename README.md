@@ -39,6 +39,9 @@ English | [中文](docs/README_CN.md)
   - [x] v0.0.0 (3DGS-baseline)
   - [x] Google Drive
   - [x] Baidu Disk
+  - [ ] reduce size
+- **ADD UI**
+  - [ ] add base UI        
 
 # Presentation
 <div align="center">
