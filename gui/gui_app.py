@@ -81,7 +81,7 @@ class GaussianSplattingGUI(QMainWindow):
         self.config_panel = ConfigPanel()
         top_layout.addWidget(self.config_panel)
         
-        # 控制按钮 (添加到配置面板的布局中)
+        # 控制按钮
         control_layout = QHBoxLayout()
         self.start_button = QPushButton("开始训练")
         self.start_button.clicked.connect(self.start_training)
@@ -89,13 +89,11 @@ class GaussianSplattingGUI(QMainWindow):
         self.stop_button.clicked.connect(self.stop_training)
         self.stop_button.setEnabled(False)
         
+        control_layout.addStretch()
         control_layout.addWidget(self.start_button)
         control_layout.addWidget(self.stop_button)
         
-        # 获取基本参数组的布局并添加控制按钮
-        basic_group = self.config_panel.findChild(QGroupBox)
-        if basic_group:
-            basic_group.layout().addRow(control_layout)
+        top_layout.addLayout(control_layout)
         
         # 添加到分割器
         splitter.addWidget(top_widget)
