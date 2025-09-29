@@ -41,7 +41,7 @@ English | [中文](docs/README_CN.md)
   - [x] Baidu Disk
   - [ ] reduce size
 - **ADD UI**
-  - [ ] add base UI        
+  - [ ] add base UI (WIP)      
 
 # Presentation
 <div align="center">

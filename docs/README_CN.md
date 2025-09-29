@@ -41,6 +41,9 @@
   - [x] v0.0.0 (3DGS-baseline)
   - [x] Google Drive
   - [x] Baidu Disk
+  - [ ] reduce size
+- **ADD UI**
+  - [ ] add base UI (待测试)
 
 # Presentation
 <div align="center">
