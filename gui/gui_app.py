@@ -9,7 +9,7 @@ import sys
 from PyQt5.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
                             QPushButton, QLabel, QFileDialog, QTabWidget,
                             QTextEdit, QProgressBar, QMessageBox, QSplitter,
-                            QGroupBox)
+                            QGroupBox, QFormLayout)
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import Qt, QThread, pyqtSignal, QTimer
 from PyQt5.QtGui import QFont, QIcon
@@ -81,7 +81,7 @@ class GaussianSplattingGUI(QMainWindow):
         self.config_panel = ConfigPanel()
         top_layout.addWidget(self.config_panel)
         
-        # 控制按钮
+        # 添加控制按钮到配置面板底部
         control_layout = QHBoxLayout()
         self.start_button = QPushButton("开始训练")
         self.start_button.clicked.connect(self.start_training)
@@ -89,11 +89,19 @@ class GaussianSplattingGUI(QMainWindow):
         self.stop_button.clicked.connect(self.stop_training)
         self.stop_button.setEnabled(False)
         
-        control_layout.addStretch()
         control_layout.addWidget(self.start_button)
         control_layout.addWidget(self.stop_button)
         
-        top_layout.addLayout(control_layout)
+        # 添加到配置面板底部
+        basic_group = self.config_panel.findChild(QGroupBox)
+        if basic_group:
+            form_layout = basic_group.layout()
+            if isinstance(form_layout, QFormLayout):
+                form_layout.addRow(control_layout)
+            else:
+                form_layout.addLayout(control_layout)
+        
+        # 控制按钮将添加到配置面板中
         
         # 添加到分割器
         splitter.addWidget(top_widget)
