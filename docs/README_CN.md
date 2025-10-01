@@ -39,11 +39,12 @@
   - [ ] **......**
 - **发布**
   - [x] v0.0.0 (3DGS-baseline)
+  - [ ] v0.0.1 + GUI
   - [x] Google Drive
   - [x] Baidu Disk
   - [ ] reduce size
 - **ADD UI**
-  - [ ] add base UI (待测试)
+  - [X] add base UI (待测试)
 
 # Presentation
 <div align="center">
@@ -126,6 +127,7 @@
 
 
 # Gaussian-Splatting 流程
+<a><img width="100%" alt= "gaussian-splatting-engineering[PIPLINE]_CN.png" src="./gaussian-splatting-engineering[PIPLINE]_CN.png"> </a>
 ## Stage_1 : 精准的相机位姿 [**关键**]
 **⚠️没有精准的位姿就没有好的结果**
 

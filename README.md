@@ -37,11 +37,12 @@ English | [中文](docs/README_CN.md)
   - [ ] **......**
 - **release package**
   - [x] v0.0.0 (3DGS-baseline)
+  - [ ] v0.0.1 + GUI
   - [x] Google Drive
   - [x] Baidu Disk
   - [ ] reduce size
 - **ADD UI**
-  - [ ] add base UI (WIP)      
+  - [X] add base UI (WIP)     
 
 # Presentation
 <div align="center">
@@ -126,6 +127,7 @@ smith_hall_outdoor_dataset-20240117T153219Z-001| This dataset from [CMU-Recon sy
 
 
 # Gaussian-Splatting PIPELINE
+<a><img width="100%" alt= "gaussian-splatting-engineering[PIPLINE].png" src="./docs/gaussian-splatting-engineering[PIPLINE].png"> </a>
 ## Stage_1 : Accurate Camera Pose [*Crucial*]
 **⚠️ !!! bad pose bad result**
 
