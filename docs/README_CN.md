@@ -128,6 +128,20 @@
 
 # Gaussian-Splatting 流程
 <a><img width="100%" alt= "gaussian-splatting-engineering[PIPLINE]_CN.png" src="./gaussian-splatting-engineering[PIPLINE]_CN.png"> </a>
+
+## Stage_0 : 数据采集
+### 相机模型
+ 相机模型 | 说明 | 
+ ---- | ---- 
+ [针孔相机模型](https://en.wikipedia.org/wiki/Pinhole_camera_model) | 针孔摄像机模型描述了三维空间中一个点的坐标与其在理想针孔摄像机的图像平面上的投影之间的数学关系，在该图像平面上，相机孔径被描述为一个点，并且没有使用镜头来聚焦光线。
+ [鱼眼相机模型](https://en.wikipedia.org/wiki/Fisheye_lens) | 鱼眼镜头是一种超广角镜头，它产生强烈的视觉扭曲，旨在创造一个广阔的全景或半球形图像。
+
+### 采集方式
+ 采集方式 | 说明 | 
+ ---- | ---- 
+前向运动扫描 | 向前运动扫描是一种通过向前移动相机并从不同角度捕获图像来扫描对象或场景的方法，例如自动驾驶数据集KITTI。 
+侧向运动扫描 | |侧运动扫描是一种通过向侧面移动相机并从不同角度捕获图像来扫描对象或场景的方法，常见的环绕式扫描。
+
 ## Stage_1 : 精准的相机位姿 [**关键**]
 **⚠️没有精准的位姿就没有好的结果**
 

@@ -128,6 +128,21 @@ smith_hall_outdoor_dataset-20240117T153219Z-001| This dataset from [CMU-Recon sy
 
 # Gaussian-Splatting PIPELINE
 <a><img width="100%" alt= "gaussian-splatting-engineering[PIPLINE].png" src="./docs/gaussian-splatting-engineering[PIPLINE].png"> </a>
+
+## Stage_0 : Data Acquisition
+### CAMERA MODEL
+ camera model | Introduction | 
+ ---- | ---- 
+ [Pinhole Camera Model](https://en.wikipedia.org/wiki/Pinhole_camera_model) | The pinhole camera model describes the mathematical relationship between the coordinates of a point in three-dimensional space and its projection onto the image plane of an ideal pinhole camera, where the camera aperture is described as a point and no lenses are used to focus light.
+ [Fisheye Camera Model](https://en.wikipedia.org/wiki/Fisheye_lens) | A fisheye lens is an ultra wide-angle lens that produces strong visual distortion intended to create a wide panoramic or hemispherical image.
+
+### ACQUISITION MODEL
+ Acquisition model | Introduction | 
+ ---- | ---- 
+ forward-motion scanning | Forward motion scanning is a method of scanning objects or scenes by moving the camera forward and capturing images from different angles, For example, the KITTI dataset for autonomous driving. 
+ side-motion scanning | Side motion scanning is a method of scanning objects or scenes by moving the camera sideways and capturing images from different angles, Common wrap-around scanning.
+
+
 ## Stage_1 : Accurate Camera Pose [*Crucial*]
 **⚠️ !!! bad pose bad result**
 
