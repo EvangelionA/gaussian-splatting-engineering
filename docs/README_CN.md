@@ -29,6 +29,7 @@
 - **格式支持**
   - [ ] [USDZ format](https://github.com/nv-tlabs/3dgrut) / [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started)
   - [ ] [SPZ format](https://github.com/nianticlabs/spz)
+  - [ ] [SOG format](https://github.com/fraunhoferhhi/Self-Organizing-Gaussians)
 - **文档支持**
   - [ ] pipeline Instructions (WIP)
   - [ ] [colmap](https://github.com/TY424/AbsGS)
@@ -89,6 +90,7 @@
  ---- | ---- 
  [USDZ](https://github.com/nv-tlabs/3dgrut) | 通用场景描述（USD）是一个用于交换3D计算机图形数据的框架。该框架侧重于协作、无损编辑，以及支持对图形数据的多种视角。
  [SPZ](https://github.com/nianticlabs/spz) | SPZ编码的splats文件通常比相应的.ply文件小约10倍，两者之间的视觉差异极小。
+ [SOG](https://github.com/fraunhoferhhi/Self-Organizing-Gaussians) | 将3DGS场景的参数组织到2D网格中,并在训练期间强制执行局部平滑度。然后利用现成的图像压缩来存储属性图像，以实现高压缩率。
 
 ## 项目结构
 ```text

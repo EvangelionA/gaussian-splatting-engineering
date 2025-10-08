@@ -27,6 +27,7 @@ English | [中文](docs/README_CN.md)
 - **format support**
   - [ ] [USDZ format](https://github.com/nv-tlabs/3dgrut) / [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started)
   - [ ] [SPZ format](https://github.com/nianticlabs/spz)
+  - [ ] [SOG format](https://github.com/fraunhoferhhi/Self-Organizing-Gaussians)
 - **doc support**
   - [ ] pipeline Instructions (WIP)
   - [ ] [colmap](https://github.com/TY424/AbsGS)
@@ -89,6 +90,8 @@ smith_hall_outdoor_dataset-20240117T153219Z-001| This dataset from [CMU-Recon sy
  ---- | ---- 
  [USDZ](https://github.com/nv-tlabs/3dgrut) | Universal Scene Description (USD) is a framework for interchange of 3D computer graphics data. The framework focuses on collaboration, non-destructive editing, and enabling multiple views and opinions about graphics data.
  [SPZ](https://github.com/nianticlabs/spz) | spz encoded splats are typically around 10x smaller than the corresponding .ply files, with minimal visual differences between the two. 
+ [SOG](https://github.com/fraunhoferhhi/Self-Organizing-Gaussians) | Organize the parameters of 3D Gaussian Splatting (3DGS) scenes into a 2D grid and enforce local smoothness during training. Then leverage off-the-shelf image compression to store the attribute images for a high compression rate. 
+
 
 ## Project Structure
 ```text
