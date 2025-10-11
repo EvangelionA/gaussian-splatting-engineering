@@ -32,9 +32,9 @@
   - [ ] [SPZ format](https://github.com/nianticlabs/spz)
   - [ ] [SOG format](https://github.com/fraunhoferhhi/Self-Organizing-Gaussians)
 - **文档支持**
-  - [ ] pipeline Instructions (WIP)
-  - [ ] [colmap](https://github.com/TY424/AbsGS)
-    - [ ] [USER GUID]
+  - [x] pipeline Instructions
+  - [x] [colmap](https://github.com/TY424/AbsGS)
+    - [x] [USER GUID]
   - [ ] [RealityCapture](https://github.com/TY424/AbsGS)
     - [ ] [USER GUID]
   - [ ] [KIRI](https://github.com/TY424/AbsGS)
