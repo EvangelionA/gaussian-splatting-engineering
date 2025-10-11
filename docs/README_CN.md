@@ -130,7 +130,7 @@
 
 
 # Gaussian-Splatting 流程
-<a><img width="100%" alt= "gaussian-splatting-engineering[PIPLINE]_CN.png" src="./gaussian-splatting-engineering[PIPLINE]_CN.png"> </a>
+<a><img width="100%" alt= "gaussian-splatting-engineering[PIPLINE]_CN.png" src="./gaussian-splatting-engineering-PIPLINE_CN.png"> </a>
 
 ## Stage_0 : 数据采集
 ### 相机模型

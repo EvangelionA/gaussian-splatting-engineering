@@ -131,7 +131,7 @@ smith_hall_outdoor_dataset-20240117T153219Z-001| This dataset from [CMU-Recon sy
 
 
 # Gaussian-Splatting PIPELINE
-<a><img width="100%" alt= "gaussian-splatting-engineering[PIPLINE].png" src="./docs/gaussian-splatting-engineering[PIPLINE].png"> </a>
+<a><img width="100%" alt= "gaussian-splatting-engineering[PIPLINE].png" src="./docs/gaussian-splatting-engineering-PIPLINE.png"> </a>
 
 ## Stage_0 : Data Acquisition
 ### CAMERA MODEL
