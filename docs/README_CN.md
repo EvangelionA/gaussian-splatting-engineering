@@ -202,6 +202,8 @@
 ### **创作领域**
  软件 | 项目 | 简介 |
  ---- | ---- | ----
+  WEBGL | 3DGS render |  <a><img height="50%" width="49.7%" alt= "web+3dgs.gif" src="../dataTestResult/3dgs-app/web+3dgs.gif"> </a>| 
+  |||
  [UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [XScene-UEPlugin](https://github.com/xverse-engine/XScene-UEPlugin/tree/main) | 对高斯飞溅模型提供了实时可视化、管理、编辑以及可扩展的混合渲染功能，这是一种从多视图照片重建3D场景的新技术。
 [UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [3DGS-UE-SDK](https://github.com/SenseSpace-AI3D/3DGS-UE-SDK) | [商汤琼宇SenseSpace平台 3D Gaussian Splatting Unreal plugin](https://space.sensetime.com/home) **需要申请试用**
 |||
