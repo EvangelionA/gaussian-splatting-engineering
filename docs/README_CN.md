@@ -200,10 +200,10 @@
  [LCC Viewer](https://xgrids.cn/support/download?page=LCCViewer) | 其余创新的一款轻量级的LCC模型查看器，配备测量工具和注释功能，专为项目审查和协作而优化。 | [website](https://xgrids.com/support/download?page=LCCViewer)
  
 ### **创作领域**
- 软件 | 项目 | 简介 |
- ---- | ---- | ----
-  WEBGL | 3DGS render |  <a><img height="50%" width="49.7%" alt= "web+3dgs.gif" src="../dataTestResult/3dgs-app/web+3dgs.gif"> </a>| 
-  |||
+ 软件 | 项目 | 简介 | DEMO |
+ ---- | ---- | ---- | ----
+ [PlayCanvas](https://developer.playcanvas.com/user-manual/gaussian-splatting/) | WEBGL+3DGS |  1.创建 Splats 2.查看 Splats 3.编辑 Splats 4.构建 Splat-based 应用| <a><img height="100%" width="100%" alt= "web+3dgs.gif" src="../dataTestResult/3dgs-app/web+3dgs.gif"> </a>| 
+  ||||
  [UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [XScene-UEPlugin](https://github.com/xverse-engine/XScene-UEPlugin/tree/main) | 对高斯飞溅模型提供了实时可视化、管理、编辑以及可扩展的混合渲染功能，这是一种从多视图照片重建3D场景的新技术。
 [UE](https://sibr.gitlabpages.inria.fr/) + 3DGSPlugin | [3DGS-UE-SDK](https://github.com/SenseSpace-AI3D/3DGS-UE-SDK) | [商汤琼宇SenseSpace平台 3D Gaussian Splatting Unreal plugin](https://space.sensetime.com/home) **需要申请试用**
 |||
