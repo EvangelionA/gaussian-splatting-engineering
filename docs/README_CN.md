@@ -25,7 +25,8 @@
 ## 📅 待办事项
 - **优化项**
   - [x] [ABS-GS](https://github.com/TY424/AbsGS) *v0.0.1*
-  - [ ] [RAIN-GS](https://github.com/whuhxb/RAIN-GS)
+  - [ ] ~~[RAIN-GS](https://github.com/whuhxb/RAIN-GS)~~
+  - [ ] [Pixel-GS](https://github.com/zhengzhang01/Pixel-GS)
   - [ ] **......**
 - **格式支持**
   - [ ] [USDZ format](https://github.com/nv-tlabs/3dgrut) / [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started)
@@ -49,22 +50,19 @@
   - [X] add base UI (待测试)
 
 # Presentation
+## Current Version
+**Origin 3DGS + ABS**
 <div align="center">
 <a><img width="100%" alt= "kitti_07_3dgs_sibr_1.gif" src="../dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_sibr_1.gif"> </a>
 <a><img width="100%" alt= "smith_hall_outdoor_3dgs_sibr_1.gif" src="../dataTestResult/3dgs-origin/smith_hall_outdoor/smith_hall_outdoor_3dgs_sibr_1.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_1.gif" src="../dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_supersplat_1.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_2.gif" src="../dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_supersplat_2.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_3dgs_supersplat_1.gif" src="../dataTestResult/3dgs-origin/smith_hall_outdoor/smith_hall_outdoor_3dgs_supersplat_1.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_3dgs_supersplat_2.gif" src="../dataTestResult/3dgs-origin/smith_hall_outdoor/smith_hall_outdoor_3dgs_supersplat_2.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "kitti_07_colamp.gif" src="../dataTestResult/colmap/kitti_07/kitti_07_colamp.png"> </a>
-<a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_dataset_colamp.gif" src="../dataTestResult/colmap/smith_hall_outdoor/smith_hall_outdoor_dataset_colamp.png"> </a>
+<a><img height="100%" width="100%" alt= "compare_orign_abs_pixel.gif" src="../dataTestResult/compare/compare.gif"> </a>
 </div>
 
 # Result
-数据集| 迭代次数 | 3DGS | ABS-GS | RAIN-GS
+数据集| 迭代次数 | 3DGS | ABS-GS | Pixel-GS
  ---- | ---- | ---- | ---- | ---- | 
- KITTI | 30000 | PSNR [28.50](./dataTestResult/3dgs-origin/kitti_07/log.txt)| PSNR [28.55](./dataTestResult/3dgs-abs/kitti_07/log.txt)| ...
- smith_hall_outdoor | 30000 | PSNR [24.85](./dataTestResult/3dgs-origin/smith_hall_outdoor/log.txt)| PSNR [24.64](./dataTestResult/3dgs-abs/smith_hall_outdoor/log.txt)| ...
+ KITTI | 30000 | PSNR [28.50](../dataTestResult/3dgs-origin/kitti_07/log.txt)| PSNR [28.55](../dataTestResult/3dgs-abs/kitti_07/log.txt)| PSNR [28.12](../dataTestResult/3dgs-pixel/kitti_07/log.txt)
+ smith_hall_outdoor | 30000 | PSNR [24.85](../dataTestResult/3dgs-origin/smith_hall_outdoor/log.txt)| PSNR [24.64](../dataTestResult/3dgs-abs/smith_hall_outdoor/log.txt)| PSNR [24.11](../dataTestResult/3dgs-pixel/kitti_07/log.txt)
 
 ## 说明
 ### 数据集说明
@@ -85,6 +83,8 @@
  ---- | ---- | ----
  [ABS-GS](https://github.com/TY424/AbsGS) | 揭示3DGS中原有的自适应密度控制策略存在梯度冲突问题，该缺陷会导致性能下降，并提出以同向梯度作为致密化的指导。| [result](datatest/abs-gs/)
  [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | 使用简单有效的策略包括稀疏大方差（SLV）随机初始化、渐进式高斯低通滤波器控制以及自适应边界扩展分割（ABE-Split）算法，即使从随机点云开始，也能稳健地引导3D高斯模型对场景进行建模。 | [result](datatest/rain-gs/)
+  [Pixel-GS](https://github.com/zhengzhang01/Pixel-GS) | 在计算生长条件期间，考虑每个视图中高斯覆盖的像素数。以覆盖像素数作为权重，动态平均不同视图的梯度，从而可以促进大高斯的增长。 | [result](dataTestResult/3dgs-pixel/)
+  etc. | **......**
 
 ## 格式支持
  格式 | 说明 | 
@@ -193,10 +193,10 @@
 
 ### **可视化**
 
- 项目 | 介绍 | 使用说明 |
- ---- | ---- | ----
+ 项目 | 介绍 | 使用说明 | Demo
+ ---- | ---- | ---- | ----
  [SIBR](https://sibr.gitlabpages.inria.fr/) | 官方3DGS可视化工具 | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
- [SuperSplat](https://github.com/playcanvas/supersplat) <br> (**recommended**)| SuperSplat是一款免费且开源的工具，用于检查、编辑、优化和发布3D高斯斑点。它基于网络技术构建，可在浏览器中运行，因此无需下载或安装。 | [live version](https://superspl.at/editor)
+ [SuperSplat](https://github.com/playcanvas/supersplat) <br> (**recommended**)| SuperSplat是一款免费且开源的工具，用于检查、编辑、优化和发布3D高斯斑点。它基于网络技术构建，可在浏览器中运行，因此无需下载或安装。 | [live version](https://superspl.at/editor) |<a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_1.gif" src="../dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_supersplat_1.gif"> </a>
  [LCC Viewer](https://xgrids.cn/support/download?page=LCCViewer) | 其余创新的一款轻量级的LCC模型查看器，配备测量工具和注释功能，专为项目审查和协作而优化。 | [website](https://xgrids.com/support/download?page=LCCViewer)
  
 ### **创作领域**

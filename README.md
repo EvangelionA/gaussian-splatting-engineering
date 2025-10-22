@@ -23,7 +23,8 @@ English | [中文](docs/README_CN.md)
 ## 📅 TODO_LIST
 - **improvement**
   - [X] [ABS-GS](https://github.com/TY424/AbsGS) *v0.0.1*
-  - [ ] [RAIN-GS](https://github.com/whuhxb/RAIN-GS)
+  - [ ] ~~[RAIN-GS](https://github.com/whuhxb/RAIN-GS)~~
+  - [ ] [Pixel-GS](https://github.com/zhengzhang01/Pixel-GS)
   - [ ] **......**
 - **format support**
   - [ ] [USDZ format](https://github.com/nv-tlabs/3dgrut) / [Omniverse](https://docs.nvidia.com/omniverse/index.html#get-started)
@@ -47,22 +48,19 @@ English | [中文](docs/README_CN.md)
   - [X] add base UI (WIP)     
 
 # Presentation
+## Current Version
+**Origin 3DGS + ABS**
 <div align="center">
 <a><img width="100%" alt= "kitti_07_3dgs_sibr_1.gif" src="./dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_sibr_1.gif"> </a>
 <a><img width="100%" alt= "smith_hall_outdoor_3dgs_sibr_1.gif" src="./dataTestResult/3dgs-origin/smith_hall_outdoor/smith_hall_outdoor_3dgs_sibr_1.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_1.gif" src="./dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_supersplat_1.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_2.gif" src="./dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_supersplat_2.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_3dgs_supersplat_1.gif" src="./dataTestResult/3dgs-origin/smith_hall_outdoor/smith_hall_outdoor_3dgs_supersplat_1.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_3dgs_supersplat_2.gif" src="./dataTestResult/3dgs-origin/smith_hall_outdoor/smith_hall_outdoor_3dgs_supersplat_2.gif"> </a>
-<a><img height="50%" width="49.7%" alt= "kitti_07_colamp.gif" src="./dataTestResult/colmap/kitti_07/kitti_07_colamp.png"> </a>
-<a><img height="50%" width="49.7%" alt= "smith_hall_outdoor_dataset_colamp.gif" src="./dataTestResult/colmap/smith_hall_outdoor/smith_hall_outdoor_dataset_colamp.png"> </a>
+<a><img height="100%" width="100%" alt= "compare_orign_abs_pixel.gif" src="./dataTestResult/compare/compare.gif"> </a>
 </div>
 
 # Result
-dataset| iters | 3DGS | ABS-GS | RAIN-GS
+dataset| iters | 3DGS | ABS-GS | Pixel-GS
  ---- | ---- | ---- | ---- | ---- | 
- KITTI | 30000 | PSNR [28.50](./dataTestResult/3dgs-origin/kitti_07/log.txt)| PSNR [28.55](./dataTestResult/3dgs-abs/kitti_07/log.txt)| ...
- smith_hall_outdoor | 30000 | PSNR [24.85](./dataTestResult/3dgs-origin/smith_hall_outdoor/log.txt)| PSNR [24.64](./dataTestResult/3dgs-abs/smith_hall_outdoor/log.txt)| ...
+ KITTI | 30000 | PSNR [28.50](./dataTestResult/3dgs-origin/kitti_07/log.txt)| PSNR [28.55](./dataTestResult/3dgs-abs/kitti_07/log.txt)| PSNR [28.12](./dataTestResult/3dgs-pixel/kitti_07/log.txt)
+ smith_hall_outdoor | 30000 | PSNR [24.85](./dataTestResult/3dgs-origin/smith_hall_outdoor/log.txt)| PSNR [24.64](./dataTestResult/3dgs-abs/smith_hall_outdoor/log.txt)| PSNR [24.11](./dataTestResult/3dgs-pixel/kitti_07/log.txt)
 
 ## Instructions
 
@@ -82,8 +80,9 @@ smith_hall_outdoor_dataset-20240117T153219Z-001| This dataset from [CMU-Recon sy
 ## Improverment
  Paper | Introduction | TestResults |
  ---- | ---- | ----
- [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. | [result](dataTestResult/abs-gs/)
- [RAIN-GS](https://github.com/whuhxb/RAIN-GS) | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud. | [result](dataTestResult/rain-gs/)
+ [ABS-GS](https://github.com/TY424/AbsGS) | Reveal that the original adaptive density control strategy in 3D Gaussian Splatting (3D-GS) has the flaw of gradient collision which results in degradation, and propose homodirectional gradient as the guidance for densification. | [result](dataTestResult/3dgs-abs/)
+ ~~[RAIN-GS](https://github.com/whuhxb/RAIN-GS)~~ | show that our simple yet effective strategy consisting of sparse-large-variance (SLV) random initialization, progressive Gaussian low-pass filter control, and the Adaptive Bound-Expanding Split (ABE-Split) algorithm robustly guides 3D Gaussians to model the scene even when starting from random point cloud. | [result](dataTestResult/rain-gs/)
+ [Pixel-GS](https://github.com/zhengzhang01/Pixel-GS) | take into account the number of pixels covered by the Gaussian in each view during the computation of the growth condition. covered pixel numbers as the weights to dynamically average the gradients from different views, such that the growth of large Gaussians can be prompted. | [result](dataTestResult/3dgs-pixel/)
  etc. | **......**
 
 ## Format Support
@@ -198,10 +197,10 @@ reference [gaussian-splatting](https://github.com/graphdeco-inria/gaussian-splat
 
 ### **VIEWER**
 
- Object | Introduction | UserGuide |
- ---- | ---- | ----
+ Object | Introduction | UserGuide | Demo
+ ---- | ---- | ---- | ---- |
  [SIBR](https://sibr.gitlabpages.inria.fr/) | Official 3DGS Viewer | [gaussian-splatting-SIBR](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#interactive-viewers)
- [SuperSplat](https://github.com/playcanvas/supersplat) <br> (**recommended**)| SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor)
+ [SuperSplat](https://github.com/playcanvas/supersplat) <br> (**recommended**)| SuperSplat is a free and open source tool for *inspecting*, *editing*, *optimizing* and *publishing* 3D Gaussian Splats. It is built on web technologies and runs in the browser, so there's nothing to download or install. | [live version](https://superspl.at/editor) | <a><img height="50%" width="49.7%" alt= "kitti_07_3dgs_supersplat_1.gif" src="./dataTestResult/3dgs-origin/kitti_07/kitti_07_3dgs_supersplat_1.gif"> </a>
  [LCC Viewer](https://xgrids.cn/support/download?page=LCCViewer) | Lightweight viewer for LCC models with measurement tools and annotation capabilities, optimized for project review and collaboration. | [website](https://xgrids.com/support/download?page=LCCViewer)
  
 ### **Creativefield**
